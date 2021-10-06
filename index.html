@@ -2,10 +2,10 @@
 
 <html>
 <head>
-    <title>Добавление метки с собственным изображением</title>
+    <title>Worldmap of OSINT tools</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_US&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
     <script type="text/javascript">
     ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
@@ -15,48 +15,10 @@
             searchControlProvider: 'yandex#search'
         }),
 
-        // Создаём макет содержимого.
+       
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'images/myIcon.gif',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        }),
-
-        myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'images/ball.png',
-            // Размеры метки.
-            iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
-
+        ),    
     myMap.geoObjects
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
