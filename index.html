@@ -13,7 +13,8 @@
             zoom: 4
         }, {
             searchControlProvider: 'yandex#search'
-        }),
+        });
+    };
 	ymaps.borders.load('001').then(function (geojson) {
         var regions = ymaps.geoQuery(geojson);
         regions.addToMap(myMap);
