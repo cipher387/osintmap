@@ -24,6 +24,14 @@ function init() {
             preset: 'islands#governmentCircleIcon',
             iconColor: '#ff0000'
         }))
+	.add(new ymaps.Placemark([41.153332, 20.168331], {
+	    
+            balloonContentHeader: 'Albania',
+            balloonContent: 'Cadastral map</br><a href="https://geoportal.asig.gov.al/map/?fc_name=alb_p_asig&auto=true">geoportal.asig.gov.al</a>'
+        }, {
+            preset: 'islands#governmentCircleIcon',
+            iconColor: '#ff0000'
+        }))
         .add(new ymaps.Placemark([48.379433, 31.16558], {
 	    balloonContentHeader: 'Ukraine',
             balloonContent: 'Cadastral map</br><a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all">map.land.gov.ua</a>'
