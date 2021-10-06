@@ -16,18 +16,11 @@ function init() {
         });
 
     myMap.geoObjects
-        .add(new ymaps.Placemark([55.684758, 37.738521], {
-            balloonContent: 'the color of <strong>the water on Bondi Beach</strong>'
-        }, {
-            preset: 'islands#icon',
-            iconColor: '#0095b6'
+        .add(new ymaps.Placemark([61.52401, 105.318756], {
+            balloonContent: '<h1>Russian Federation</h1></br><h3>Cadastral map</h3>'
         }))
-        .add(new ymaps.Placemark([55.790139, 37.814052], {
-            balloonContent: '<strong>blue</strong> color',
-            iconCaption: 'Really, really long but super interesting text'
-        }, {
-            preset: 'islands#blueCircleDotIconWithCaption',
-            iconCaptionMaxWidth: '50'
+        .add(new ymaps.Placemark([48.379433, 31.16558], {
+            balloonContent: '<h1>Ukraine</h1></br><h3>Cadastral map</h3>'
         }));
 }
 
