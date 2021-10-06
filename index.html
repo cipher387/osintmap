@@ -19,10 +19,11 @@ function init() {
         .add(new ymaps.Placemark([61.52401, 105.318756], {
 	    
             balloonContentHeader: 'Russian Federation',
-            balloonContent: '<h2>Cadastral map</h2><a href="https://pkk.rosreestr.ru/#/search">https://pkk.rosreestr.ru/#/search</a>'
+            balloonContent: 'Cadastral map</br><a href="https://pkk.rosreestr.ru/#/search">pkk.rosreestr.ru</a>'
         }))
         .add(new ymaps.Placemark([48.379433, 31.16558], {
-            balloonContent: '<h1>Ukraine</h1></br><h3>Cadastral map</h3>'
+	    balloonContentHeader: 'Ukraine',
+            balloonContent: 'Cadastral map</br><a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all">map.land.gov.ua</a>
         }));
 }
 
