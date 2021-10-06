@@ -17,7 +17,9 @@ function init() {
 
     myMap.geoObjects
         .add(new ymaps.Placemark([61.52401, 105.318756], {
-            balloonContent: '<h1>Russian Federation</h1></br><h3>Cadastral map</h3><a href="https://pkk.rosreestr.ru/#/search">https://pkk.rosreestr.ru/#/search</a>'
+	    
+            balloonContentHeader: 'Russian Federation';
+            balloonContent: '<h2>Cadastral map</h2><a href="https://pkk.rosreestr.ru/#/search">https://pkk.rosreestr.ru/#/search</a>'
         }))
         .add(new ymaps.Placemark([48.379433, 31.16558], {
             balloonContent: '<h1>Ukraine</h1></br><h3>Cadastral map</h3>'
