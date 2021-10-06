@@ -1,2 +1,1 @@
-# osintmap
-Test repo for checking Yandex API and Github Pages
+This is a test repo. Ignore it, please.
