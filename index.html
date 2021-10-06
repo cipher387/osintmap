@@ -1,19 +1,21 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Worldmap of OSINT tools</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  
-    <script src="https://api-maps.yandex.ru/2.1/?load=package.ful&lang=en-US&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
+    <title>Examples. Polygon</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_RU&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
     <script type="text/javascript">
-    ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 4
+	ymaps.ready(init);
+
+function init() {
+    var myMap = new ymaps.Map("map", {
+            center: [55.73, 37.75],
+            zoom: 10
         }, {
             searchControlProvider: 'yandex#search'
         });
-    });
-// Creating a polygon using the GeoObject class.
+
+    // Creating a polygon using the GeoObject class.
     var myGeoObject = new ymaps.GeoObject({
         // Describing the geometry of the geo object.
         geometry: {
@@ -61,8 +63,49 @@
     });
 
     // Adding the polygon to the map.
-    myMap.geoObjects.add(myGeoObject);	
-    </script>
+    myMap.geoObjects.add(myGeoObject);
+
+    // Creating a polygon using the Polygon auxiliary class.
+    var myPolygon = new ymaps.Polygon([
+        /**
+         * Specifying the coordinates of the vertices of the polygon.
+         *  The coordinates of the vertices of the external contour.
+         */
+        [
+            [55.75, 37.50],
+            [55.80, 37.60],
+            [55.75, 37.70],
+            [55.70, 37.70],
+            [55.70, 37.50]
+        ],
+        // The coordinates of the vertices of the inner contour.
+        [
+            [55.75, 37.52],
+            [55.75, 37.68],
+            [55.65, 37.60]
+        ]
+    ], {
+        /**
+         * Describing the properties of the geo object.
+         *  The contents of the balloon.
+         */
+        hintContent: "Polygon"
+    }, {
+        /**
+         * Setting geo object options.
+         *  Fill color.
+         */
+        fillColor: '#00FF0088',
+        // The stroke width.
+        strokeWidth: 5
+    });
+
+    // Adding the polygon to the map.
+    myMap.geoObjects.add(myPolygon);
+}
+
+	
+	</script>
 	<style>
         html, body, #map {
             width: 100%; height: 100%; padding: 0; margin: 0;
@@ -73,4 +116,3 @@
 <div id="map"></div>
 </body>
 </html>
-
