@@ -7,7 +7,7 @@ https://cipher387.github.io/osintmap/
 
 <h1>What if you want to make a copy of the map with other points?</h1>
 
-1. Go to https://developer.tech.yandex.ru/services/ and get the API-key for Yandex Maps API.
+1. Go to https://developer.tech.yandex.ru/services/ and get the API-key for Yandex Maps API (for non-commercial use only).
 
 2. When filling out the form, be sure to specify the site where you will use the map. The key will work only on the URL that is specified in the form. If you are going to put it on Github Pages, specify an address like https://cipher387.github.io/ (replace cipher387 with your username)
 
@@ -15,7 +15,9 @@ https://cipher387.github.io/osintmap/
 
 4. If you want to publish your map in Github Pages, just go to Settings->Pages and publish it! </br> ![API Key](https://github.com/cipher387/osintmap/blob/main/Githubpages.jpg)
 
-5. If you want add some placemark, use this code example:</br>
+5. About how to configure the map and add elements to it very clearly and intelligibly written in Yandex Maps Javascript API documentation https://yandex.com/dev/maps/jsbox/2.1/?from=jsapi
+
+6. If you want just add some placemark, use this code example:</br>
 ```javascript
            .add(new ymaps.Placemark([53.709807, 27.953389], {
                balloonContentHeader: 'Belarus',
