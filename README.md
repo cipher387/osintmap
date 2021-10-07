@@ -15,14 +15,16 @@ https://cipher387.github.io/osintmap/
 
 4. If you want to publish your map in Github Pages, just go to Settings->Pages and publish it! </br> ![API Key](https://github.com/cipher387/osintmap/blob/main/Githubpages.jpg)
 
-5. If you want add some placemark, use this code example:</br>.add(new ymaps.Placemark([53.709807, 27.953389], {
-          
+5. If you want add some placemark, use this code example:</br>
+```javascript
+           .add(new ymaps.Placemark([53.709807, 27.953389], {
             balloonContentHeader: 'Belarus',
             balloonContent: 'Cadastral map</br><a href="https://map.nca.by/">map.nca.by</a></br>Business registry</br><a href="https://tsouz.belgiss.by/#!/tsouz/certifs">tsouz.belgiss.by</a>'
         }, {
             preset: 'islands#governmentCircleIcon',
             iconColor: '#ff0000'
         }))
+        ```
        
         
     
