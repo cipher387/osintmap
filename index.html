@@ -1,962 +1,182 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Worldmap of OSINT tools</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://cipher387.github.io/style.css">
-	<script src="https://api-maps.yandex.ru/2.1/?lang=en-US&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
-	<script type="text/javascript">
+    <title>Worldmap of OSINT tools</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://cipher387.github.io/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en-US&amp;apikey=dd2f32f4-ec03-4262-9a22-534440cf66bd" type="text/javascript"></script>
+    <script type="text/javascript">
 	ymaps.ready(init);
 
-	function init() {
-		var myMap = new ymaps.Map("map", {
-			center: [35.00, 1.00],
-			zoom: 4
-		}, {
-			searchControlProvider: 'yandex#search'
-		});
-		myMap.geoObjects.add(new ymaps.Placemark([61.52401, 105.318756], {
-			balloonContentHeader: 'Russian Federation',
-			balloonContent: 'Cadastral map</br><a href="https://pkk.rosreestr.ru/#/search">pkk.rosreestr.ru</a></br>Business registry</br><a href="https://rmsp.nalog.ru/">rmsp.nalog.ru</a>  </br>Venicle information</br><a target="_blank" href="https://www.nomerogram.ru/">nomerogram.ru</a></br>Court records</br><a href="https://sudrf.ru/index.php?id=300&searchtype=sp">State Automated System of the Russian Federation "Justice"</a></br><a href="https://sudact.ru/">Judicial and regulatory acts of the Russian Federation</a></br>Yellow/White pages</br><a href="http://www.yp.ru/yellow.html/english/?n=2">Russian Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([28.033886, 1.659626], {
-			balloonContentHeader: 'Algeria',
-			balloonContent: 'Business registry</br><a href="https://sidjilcom.cnrc.dz/">sidjilcom.cnrc.dz</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([40.069099, 45.038189], {
-			balloonContentHeader: 'Armenia',
-			balloonContent: 'Cadastral map</br><a href="https://www.e-cadastre.am/customer/login/map/1">e-cadastre.am</a></br>Business registry</br><a href="http://www.petekamutner.am/tsOS_Taxpayers.aspx">petekamutner.am</a></br>Court records</br><a href="https://www.arlis.am/">Legal information system of Armenia</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([53.709807, 27.953389], {
-			balloonContentHeader: 'Belarus',
-			balloonContent: 'Cadastral map</br><a href="https://map.nca.by/">map.nca.by</a></br>Business registry</br><a href="https://tsouz.belgiss.by/#!/tsouz/certifs">tsouz.belgiss.by</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([7.369722, 12.354722], {
-			balloonContentHeader: 'Cameroon',
-			balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/Cameroon/en/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([35.126413, 33.429859], {
-			balloonContentHeader: 'Cyprus',
-			balloonContent: 'Cadastral map</br><a href="http://eservices.dls.moi.gov.cy/#/national/geoportalmapviewer">eservices.dls.moi.gov.cy</a></br>Business registry</br><a href="https://efiling.drcor.mcit.gov.cy/DrcorPublic/SearchForm.aspx">efiling.drcor.mcit.gov.cy</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([56.26392, 9.501785], {
-			balloonContentHeader: 'Denmark',
-			balloonContent: 'Cadastral map</br><a href="https://kort.matrikel.dk/spatialmap">kort.matrikel.dk</a></br>Business registry</br><a href="https://datacvr.virk.dk/data/">datacvr.virk.dk</a> </br>Venicle information</br><a target="_blank" href="https://www.nummerplade.net/nummerplade/">nummerplade.net</a></br>Court records</br><a href="https://www.domstol.dk/">Denmark Domstole</a></br>Yellow/White pages</br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.909.dk/">Danish Local Search</a></br><a href="http://www.yellowpages.dk/">Danish Yellow Pages</a></br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.909.dk/">Danish Local Search</a></br><a href="http://www.yellowpages.dk/">Danish Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([9.145, 40.489673], {
-			balloonContentHeader: 'Ethiopia',
-			balloonContent: 'Cadastral map</br><a href="http://ethiopian.portal.miningcadastre.com/MapPage.aspx?PageID=a16a9300-7c58-4f81-9e5c-97e13b22b0c6">ethiopian.portal.miningcadastre.com</a></br>Business registry</br><a href="https://ariregister.rik.ee/">ariregister.rik.ee</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-25.274398, 133.775136], {
-			balloonContentHeader: 'Australia',
-			balloonContent: 'Cadastral map</br><a href="https://www.planningportal.nsw.gov.au/spatialviewer/#/find-a-property/address">planningportal.nsw.gov.au</a></br>Business registry</br><a href="https://abr.business.gov.au/Search/">abr.business.gov.au</a></br>Transport live map</br><a target="_blank" href="https://anytrip.com.au/">anytrip.com.au</a></br>Passengers lists</br><a target="_blank" href="https://recordsearch.naa.gov.au/">recordsearch.naa.gov.au</a></br>Yellow/White pages</br><a href="http://www.whitepages.com.au/">Australian White  Pages</a></br><a href="http://www.yellowpages.com.au/">Australian Yellow Pages</a'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([58.595272, 25.013607], {
-			balloonContentHeader: 'Estonia',
-			balloonContent: 'Cadastral map</br><a href="https://xgis.maaamet.ee/xgis2/page/app/maainfo">xgis.maaamet.ee</a> </br>Venicle information</br><a target="_blank" href="https://eteenindus.mnt.ee/public/soidukTaustakontroll.jsf">eteenindus.mnt.ee</a></br>Court records</br><a href="https://www.riigiteataja.ee/kohtulahendid/koik_menetlused.html">Ministry of Justice of Estonia</a></br>Yellow/White pages</br><a href="http://www.yellowpages.ee/en/">Estonia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([61.92411, 25.748151], {
-			balloonContentHeader: 'Finland',
-			balloonContent: 'Cadastral map</br><a href="https://asiointi.maanmittauslaitos.fi/karttapaikka/">asiointi.maanmittauslaitos.fi</a></br>Business registry</br><a href="https://www.asiakastieto.fi/yritykset/">asiakastieto.fi</a></br>Venicle information</br><a target="_blank" href="https://www.biltema.fi/auton-varaosahaku/">biltema.fi</a></br>Court records</br><a href="https://www.finlex.fi/fi/oikeus/">Finlex</a></br>Yellow/White pages</br><a href="http://www.fonecta.fi/">Finland Yellow Pages</a></br><a href="http://www.keltaisetsivut.fi/">Finland Yellow Pages &amp; Phonebook</a></br><a href="http://www.numeronetti.fi/">Finland White Pages</a></br><a href="http://www.yritystele.fi/">Finland Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([46.227638, 2.213749], {
-			balloonContentHeader: 'France',
-			balloonContent: 'Cadastral map</br><a href="https://www.cadastre.gouv.fr/scpc/accueil.do">cadastre.gouv.fr</a></br>Business registry</br><a href="https://www.verif.com/">verif.com</a> </br>Venicle information</br><a target="_blank" href="https://siv-auto.fr/">siv-auto.fr</a></br>Yellow/White pages</br><a href="http://www.pagesjaunes.fr/?lang=en">French Yellow Pages</a></br>Transport live map</br><a href="https://www.sncf.com/fr/itineraire-reservation/geolocalisation">sncf.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([51.50853, -0.12574], {
-			balloonContentHeader: 'London',
-			balloonContent: 'Cadastral map</br><a href="https://apps.london.gov.uk/public-land/">apps.london.gov.uk</a></br>Transport live map</br><a target="_blank" href="https://traintimes.org.uk/map/london-buses/#73">Live London Buses</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([9.945587, -9.696645], {
-			balloonContentHeader: 'Guinea',
-			balloonContent: 'Cadastral map</br><a href="http://guinee.cadastreminier.org/fr/">guinee.cadastreminier.org</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([7.539989, -5.54708], {
-			balloonContentHeader: 'Ivory Coast',
-			balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/CoteDIvoire/FR/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([48.019573, 66.923684], {
-			balloonContentHeader: 'Kazakhstan',
-			balloonContent: 'Cadastral map</br><a href="http://www.aisgzk.kz/aisgzk/ru/content/maps/">aisgzk.kz</a></br>Business registry</br><a href="https://pk.uchet.kz/">pk.uchet.kz</a></br>Court records</br><a href="https://office.sud.kz/lawsuit/">Supreme Court of Kazakhstan</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-0.023559, 37.906193], {
-			balloonContentHeader: 'Kenia',
-			balloonContent: 'Cadastral map</br><a href="https://portal.miningcadastre.go.ke/Site/EmbeddedMapPortal.aspx?PageID=f877b9bc-d68a-415f-b051-5048ff5a68b0">portal.miningcadastre.go.ke</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([42.602636, 20.902977], {
-			balloonContentHeader: 'Kosovo',
-			balloonContent: 'Cadastral map</br><a href="http://geoportal.rks-gov.net">geoportal.rks-gov.net</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([56.879635, 24.603189], {
-			balloonContentHeader: 'Latvia',
-			balloonContent: 'Cadastral map</br><a href="https://www.kadastrs.lv/graphical_data/show">kadastrs.lv</a></br>Business registry</br><a href="http://www.firmas.lv/">firmas.lv</a></br>Court records</br><a href="https://tiesas.lv/e-pakalpojumi/tiesvedibas-gaita">Court Administration of Latvia</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([6.428055, -9.429499], {
-			balloonContentHeader: 'Liberia',
-			balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/liberia/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-13.254308, 34.301525], {
-			balloonContentHeader: 'Malawi',
-			balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/malawi/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([21.00789, -10.940835], {
-			balloonContentHeader: 'Mauritania',
-			balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/Mauritania/fr/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-18.665695, 35.529562], {
-			balloonContentHeader: 'Mozambique',
-			balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/mozambique/en/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-22.95764, 18.49041], {
-			balloonContentHeader: 'Namibia',
-			balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/namibia/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([52.132633, 5.291266], {
-			balloonContentHeader: 'Netherlands',
-			balloonContent: 'Cadastral map</br><a href="https://kadastralekaart.com/kaart">kadastralekaart.com</a></br>Court records</br><a href="https://uitspraken.rechtspraak.nl/">Rechtspraak</a></br>Yellow/White pages</br><a href="http://www.detelefoongids.nl/">Netherlands Telephone Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([60.472024, 8.468946], {
-			balloonContentHeader: 'Norway',
-			balloonContent: 'Cadastral map</br><a href="https://geodataonline.maps.arcgis.com/apps/Embed/index.html?webmap=384b4cac7e4b4c41980f90dc0f30fb12&extent=11.0427,59.955,11.0472,59.9566&zoom=true&scale=true&disable_scroll=false&theme=light">geodataonline.maps.arcgis.com</a></br>Venicle information</br><a target="_blank" href="https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/sjekk-kjoretoyopplysninger/">vegvesen.no</a></br>Court records</br><a href="https://www.domstol.no/nar-gar-rettssaken/">Court Administration of Norwegia</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-6.314993, 143.95555], {
-			balloonContentHeader: 'Papua New Guinea',
-			balloonContent: 'Cadastral map</br><a href="http://portal.mra.gov.pg/map/">portal.mra.gov.pg</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([51.919438, 19.145136], {
-			balloonContentHeader: 'Poland',
-			balloonContent: 'Cadastral map</br><a href="hhttps://mapy.geoportal.gov.pl/imap/Imgp_2.html?gpmap=gp0">mapy.geoportal.gov.pl</a></br>Business registry</br><a href="https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/uisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0">podatki.gov.pl</a></br>Court records</br><a href="https://www.saos.org.pl/search">Saos</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([40.463667, -3.74922], {
-			balloonContentHeader: 'Spain',
-			balloonContent: 'Cadastral map</br><a href="https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCBusqueda.aspx">sedecatastro.gob.es</a> </br>Venicle information</br><a target="_blank" href="https://www.oscaro.es/">oscaro.es</a></br>Yellow/White pages</br><a href="http://www.paginasamarillas.es/">Spain Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([6.876991, 31.306978], {
-			balloonContentHeader: 'South Sudan',
-			balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/southsudan/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([46.818188, 8.227512], {
-			balloonContentHeader: 'Switzerland',
-			balloonContent: 'Cadastral map</br><a href="https://map.geo.admin.ch/?lang=de&topic=cadastre&bgLayer=ch.swisstopo.pixelkarte-farbe&E=2600163.86&N=1199711.79&zoom=8.880769760770255&layers_visibility=true,false">map.geo.admin.ch</a></br>Business registry</br><a href="https://www.zefix.admin.ch/en/search/entity/welcome">zefix.admin.ch</a></br>Yellow/White pages</br><a href="http://www.branchenbuch.ch/">Switzerland Business Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-6.369028, 34.888822], {
-			balloonContentHeader: 'Tanzania',
-			balloonContent: 'Cadastral map</br><a href="http://portal.madini.go.tz/map/">portal.madini.go.tz</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([15.870032, 100.992541], {
-			balloonContentHeader: 'Tailand',
-			balloonContent: 'Cadastral map</br><a href="https://landsmaps.dol.go.th/">landsmaps.dol.go.th</a></br>Court records</br><a href="https://decision.coj.go.th/">Computer Systems Division Bureau of Information Technology</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([8.619543, 0.824782], {
-			balloonContentHeader: 'Togo',
-			balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/togo/en/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([38.963745, 35.243322], {
-			balloonContentHeader: 'Turkey',
-			balloonContent: 'Cadastral map</br><a href="https://cbs.ogm.gov.tr/vatandas/">cbs.ogm.gov.tr</a></br>Court records</br><a href="https://www.rekabet.gov.tr/tr/Davalar">Competition Authority</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([1.373333, 32.290275], {
-			balloonContentHeader: 'Uganda',
-			balloonContent: 'Cadastral map</br><a href="http://portals.flexicadastre.com/uganda/">portals.flexicadastre.com</a></br>Yellow/White pages</br><a href="http://www.yellowpages-uganda.com/">Uganda Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([37.09024, -95.712891], {
-			balloonContentHeader: 'United States',
-			balloonContent: 'Cadastral map</br><a href="https://qpublic.schneidercorp.com/">qpublic.schneidercorp.com</a></br>Passengers lists</br><a target="_blank" href="https://www.slavevoyages.org/voyage/database">slavevoyages.org/voyage/database</a></br><a target="_blank" href="https://www.slavevoyages.org/american/database">slavevoyages.org/american/database</a></br><a target="_blank" href="https://www.slavevoyages.org/resources/names-database">slavevoyages.org/resources/names-database</a></br>Venicle information</br><a target="_blank" href="https://www.autocheck.com/vehiclehistory/autocheck-score">autocheck.com</a></br>Court records</br><a href="https://www.judyrecords.com/">JudyRecords.com (564 million USA Court Cases</a></br>Yellow/White pages</br><a href="http://www.superpages.com/">Yellow Pages</a></br><a href="http://www.switchboard.com/">Internet Phone Book</a></br><a href="http://www.yellowpages.com/">US Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([10.82302, 106.62965], {
-			balloonContentHeader: 'Ho Chi Minh City',
-			balloonContent: 'Cadastral map</br><a href="https://thongtinquyhoach.hochiminhcity.gov.vn/">thongtinquyhoach.hochiminhcity.gov.vn</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([-13.133897, 27.849332], {
-			balloonContentHeader: 'Zambia',
-			balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/zambia/">portals.landfolio.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([41.153332, 20.168331], {
-			balloonContentHeader: 'Albania',
-			balloonContent: 'Cadastral map</br><a href="https://geoportal.asig.gov.al/map/?fc_name=alb_p_asig&auto=true">geoportal.asig.gov.al</a></br>Court records</br><a href="http://www.gjykata.gov.al/gjykata-e-lart%C3%AB/gjykata-e-lart%C3%AB/c%C3%ABshtjet-gjyq%C3%ABsore/c%C3%ABshtjet-civile/">Supreme Court of the Republic of Albania (Civil case)</a></br><a href="http://www.gjykata.gov.al/gjykata-e-lart%C3%AB/gjykata-e-lart%C3%AB/c%C3%ABshtjet-gjyq%C3%ABsore/c%C3%ABshtjet-penale/">Supreme Court of the Republic of Albania (Criminal cases)</a></br>Yellow/White pages</br><a href="http://albanianyellowpages.com">Albania Yellow/White Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([17.060816, -61.796428], {
-			balloonContentHeader: 'Antigua & Barbuda',
-			balloonContent: 'Business registry</br><a href="https://abipco.gov.ag/">abipco.gov.ag</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-38.416097, -63.616672], {
-			balloonContentHeader: 'Argentina',
-			balloonContent: 'Business registry</br><a href="https://www.argentina.gob.ar/aaip/datospersonales/reclama">argentina.gob.ar</a></br>Yellow/White pages</br><a href="http://amarillas.emol.com/home">Argentina White/Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([47.516231, 14.550072], {
-			balloonContentHeader: 'Austria',
-			balloonContent: 'Business registry</br><a href="https://www.firmenabc.at/">firmenabc.at</a></br>Yellow/White pages</br><a href="http://www.herold.at/">Austria Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([40.143105, 47.576927], {
-			balloonContentHeader: 'Azerbaijan',
-			balloonContent: 'Business registry</br><a href="https://www.e-taxes.gov.az/ebyn/commersialChecker.jsp">e-taxes.gov.az</a></br>Court records</br><a href="https://e-mehkeme.gov.az/Public/Cases?courtid=">Azerbaijan electronic courts system</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([25.03428, -77.39628], {
-			balloonContentHeader: 'Bahamas',
-			balloonContent: 'Business registry</br><a href="https://www.bahamas.gov.bs/wps/myportal/public/rgd/company/company-search">bahamas.gov.bs</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([50.503887, 4.469936], {
-			balloonContentHeader: 'Belgium',
-			balloonContent: 'Business registry</br><a href="https://kbopub.economie.fgov.be/kbopub/zoeknaamfonetischform.html">kbopub.economie.fgov.be</a></br>Yellow/White pages</br><a href="http://www.1207.be/">Belgium White Pages</a></br><a href="http://www.pagesdor.be/">Golden Pages Belgium</a></br><a href="http://www.goudengids.be/">Yellow Pages</a></br><a href="http://www.infobel.be">Infobel Belgium Telephone Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([17.189877, -88.49765], {
-			balloonContentHeader: 'Belize',
-			balloonContent: 'Business registry</br><a href="https://companysearch.bz/public_search/">companysearch.bz</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([43.915886, 17.679076], {
-			balloonContentHeader: 'Bosnia and Herzegovina',
-			balloonContent: 'Business registry</br><a href="https://search.bisnode.rs/search/?c=ba&q=">search.bisnode.rs</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([19.513469, -80.566956], {
-			balloonContentHeader: 'Cayman Islands',
-			balloonContent: 'Business registry</br><a href="https://www.cima.ky/search-entities-cima">cima.ky</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([49.817492, 15.472962], {
-			balloonContentHeader: 'Czech Respublic',
-			balloonContent: 'Business registry</br><a href="https://or.justice.cz/ias/ui/rejstrik-$firma?">or.justice.cz</a></br>Venicle information</br><a target="_blank" href="https://spz.penize.cz/">spz.penize.cz</a></br>Yellow/White pages</br><a href="http://www.zlatestranky.cz/">Czech Catalog &amp; Phonebook</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-33.45694, -70.64827], {
-			balloonContentHeader: 'Santiago',
-			balloonContent: 'Business registry</br><a href="https://www.conservador.cl/portal/indice_comercio">conservador.cl</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([35.86166, 104.195397], {
-			balloonContentHeader: 'China',
-			balloonContent: 'Business registry</br><a href="https://xinyong.1688.com/">xinyong.1688.com</a></br>Court records</br><a href="https://splcgk.court.gov.cn/lcgkw/user#">China Judicial Process Information Online</a></br><a href="https://wenshu.court.gov.cn/">China Jugments Online</a></br>Yellow/White pages</br><a href="http://www.chinavista.com/business/directory/home.html">China Vista Yellow Pages</a></br><a href="http://www.chinavista.com/business/directory/home.html">China Vista Yellow Pages</a></br><a href="http://www.yellowpages-china.com/">China Yellow Pages</a></br><a href="http://www.yellowpages-china.com/">China Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-21.236736, -159.777671], {
-			balloonContentHeader: 'Cook Islands',
-			balloonContent: 'Business registry</br><a href="https://registry.justice.gov.ck/corp/search.aspx">registry.justice.gov.ck</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([45.1, 15.2], {
-			balloonContentHeader: 'Croatia',
-			balloonContent: 'Business registry</br><a href="https://www.companywall.hr/">companywall.hr</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([12.16957, -68.99002], {
-			balloonContentHeader: 'Curacao',
-			balloonContent: 'Business registry</br><a href="http://www.curacao-chamber.cw/services/registry/search-company">curacao-chamber.cw</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([15.414999, -61.370976], {
-			balloonContentHeader: 'Dominica',
-			balloonContent: 'Business registry</br><a href="https://efiling.drcor.mcit.gov.cy/DrcorPublic/SearchForm.aspx">efiling.drcor.mcit.gov.cy</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([61.892635, -6.911806], {
-			balloonContentHeader: 'Faroe Islands',
-			balloonContent: 'Business registry</br><a href="https://www.skraseting.fo/en/companies/search-companies/">skraseting.fo</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([51.165691, 10.451526], {
-			balloonContentHeader: 'Germany',
-			balloonContent: 'Business registry</br><a href="https://www.unternehmensregister.de/ureg/">unternehmensregister.de</a></br>Yellow/White pages</br><a href="http://www.klicktel.de/branchenbuch">German Business Directory</a></br><a href="http://www.gelbeseiten.de/">Gelbe Seiten Yellow Pages</a></br><a href="http://www.teleauskunft.de/">German Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([49.465691, -2.585278], {
-			balloonContentHeader: 'Guernsey',
-			balloonContent: 'Business registry</br><a href="https://www.greg.gg/webCompSearch.aspx">greg.gg</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([15.783471, -90.230759], {
-			balloonContentHeader: 'Guatemala',
-			balloonContent: 'Business registry</br><a href="http://econsultas.registromercantil.gob.gt">econsultas.registromercantil.gob.gt</a></br>Yellow/White pages</br><a href="http://www.paginasamarillas.com.gt/">Guatemala Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([47.162494, 19.503304], {
-			balloonContentHeader: 'Hungary',
-			balloonContent: 'Business registry</br><a href="https://www.adoszam.hu/">adoszam.hu</a></br>Court records</br><a href="https://eakta.birosag.hu/anonimizalt-hatarozatok">National Court Office</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([20.593684, 78.96288], {
-			balloonContentHeader: 'India',
-			balloonContent: 'Business registry</br><a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do">mca.gov.in</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-0.789275, 113.921327], {
-			balloonContentHeader: 'Indonesia',
-			balloonContent: 'Business registry</br><a href="https://ahu.go.id/pencarian/profil-pt">ahu.go.id</a></br>Court records</br><a href="https://kepaniteraan.mahkamahagung.go.id/perkara/">Registrar of the Supreme Court of the Republic of Indonesia</a></br>Yellow/White pages</br><a href="http://www.yellowpages.co.id/">Indonesia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([54.236107, -4.548056], {
-			balloonContentHeader: 'Isle of Man',
-			balloonContent: 'Business registry</br><a href="https://services.gov.im/ded/services/companiesregistry/companysearch.iom">services.gov.im</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([31.046051, 34.851612], {
-			balloonContentHeader: 'Israel',
-			balloonContent: 'Business registry</br><a href="https://ica.justice.gov.il/AnonymousRequest/Search">ica.justice.gov.il</a></br>Court records</br><a href="https://supreme.court.gov.il/Pages/fullsearch.aspx">Supreme court of Israel</a></br>Yellow/White pages</br><a href="http://ie.kompass.com/">Kompass Business Directory</a></br><a href="http://www.yellow.com/376.html">Israel Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([41.87194, 12.56738], {
-			balloonContentHeader: 'Italy',
-			balloonContent: 'Business registry</br><a href="https://www.empresite.it/">empresite.it</a></br>Venicle information</br><a target="_blank" href="https://www.sevim.it/gratis/targa.asp">sevim.it</a></br>Yellow/White pages</br><a href="http://www.pronto.it/">Italy Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([36.204824, 138.252924], {
-			balloonContentHeader: 'Japan',
-			balloonContent: 'Business registry</br><a href="https://www1.touki.or.jp/gateway.html">touki.or.jp</a></br>Court records</br><a href="https://www.courts.go.jp/app/hanrei_jp/search1">Courts in Japan</a></br>Yellow/White pages</br><a href="http://itp.ne.jp/">Japan Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([49.214439, -2.13125], {
-			balloonContentHeader: 'Jersey',
-			balloonContent: 'Business registry</br><a href="https://www.jerseyfsc.org/registry/registry-entities/">jerseyfsc.org</a></br>Court records</br><a href="https://www.jerseylaw.je/judgments/Pages/Search.aspx">Jersey Law</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([41.20438, 74.766098], {
-			balloonContentHeader: 'Kyrgyzstan',
-			balloonContent: 'Business registry</br><a href="https://salyk.kg/TaxPayer/Info">salyk.kg</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([55.169438, 23.881275], {
-			balloonContentHeader: 'Lithuanian',
-			balloonContent: 'Business registry</br><a href="https://www.registrucentras.lt/jar/p/index.php">registrucentras.lt</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([31.791702, -7.09262], {
-			balloonContentHeader: 'Morocco',
-			balloonContent: 'Business registry</br><a href="https://www.directinfo.ma/">directinfo.ma</a></br>Court records</br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TA/?Page=ServicesElectronique&TypJur=TA">Morocco Ministry of Justice (Administrative courts)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CAA/?Page=ServicesElectronique&TypJur=CAA">Morocco Ministry of Justice (Administrative courts of Appeal)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TC/?Page=ServicesElectronique&TypJur=TC">Morocco Ministry of Justice (Commercial courts)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CAC/?Page=ServicesElectronique&TypJur=CAC">Morocco Ministry of Justice (Commercial courts of Appeal)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TPI/?Page=ServicesElectronique&TypJur=TPI">Morocco Ministry of Justice (Courts of first instance)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CA/?Page=ServicesElectronique&TypJur=CA">Morocco Ministry of Justice (Courts of appeal)</a></br>Yellow/White pages</br><a href="http://www.telecontact.ma/">Morocco White Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-20.348404, 57.552152], {
-			balloonContentHeader: 'Mauritius',
-			balloonContent: 'Business registry</br><a href="https://companies.govmu.org:4343/MNSOnlineSearch/">companies.govmu.org</a></br>Court records</br><a href="https://supremecourt.govmu.org/_Layouts/CLIS.DMS/Judgment/SearchPage.aspx">Supreme Court of Mauritius</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-40.900557, 174.885971], {
-			balloonContentHeader: 'New Zeland',
-			balloonContent: 'Business registry</br><a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/search">app.companiesoffice.govt.nz</a></br>Transport live map</br><a target="_blank" href="https://anytrip.com.au/">anytrip.com.au</a></br>Yellow/White pages</br><a href="http://yellow.co.nz/">New Zealand Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-19.054445, -169.867233], {
-			balloonContentHeader: 'Niue',
-			balloonContent: 'Business registry</br><a href="http://www.companies.gov.nu/search-the-register/companies-register/">companies.gov.nu</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([60.472024, 8.468946], {
-			balloonContentHeader: 'Norway',
-			balloonContent: 'Business registry</br><a href="https://www.proff.no/">proff.no</a></br>Court records</br><a href="https://www.domstol.no/nar-gar-rettssaken/">Court Administration of Norwegia</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([39.399872, -8.224454], {
-			balloonContentHeader: 'Portugal',
-			balloonContent: 'Business registry</br><a href="http://publicacoes.mj.pt/Pesquisa.aspx">publicacoes.mj.pt</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([13.909444, -60.978893], {
-			balloonContentHeader: 'Saint Lucia',
-			balloonContent: 'Business registry</br><a href="http://www.rocip.gov.lc/stlucia/default.aspx">rocip.gov.lc</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([43.94236, 12.457777], {
-			balloonContentHeader: 'San Marino',
-			balloonContent: 'Business registry</br><a href="https://registroimprese.cc.sm/">registroimprese.cc.sm</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-4.679574, 55.491977], {
-			balloonContentHeader: 'Seychelles',
-			balloonContent: 'Business registry</br><a href="http://www.sqa.sc/BizRegistration/WebSearchBusiness.aspx">sqa.sc</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([8.460555, -11.779889], {
-			balloonContentHeader: 'Sierra Leone',
-			balloonContent: 'Business registry</br><a href="http://www.oarg.gov.sl/cforms/portal.html">oarg.gov.sl</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([1.352083, 103.819836], {
-			balloonContentHeader: 'Singapore',
-			balloonContent: 'Business registry</br><a href="https://www.bizfile.gov.sg/ngbbizfileinternet/faces/oracle/webcenter/portalapp/pages/BizfileHomepage.jspx">bizfile.gov.sg</a></br>Yellow/White pages</br><a href="http://www.phonebook.com.sg/">Singapore White Pages</a></br><a href="http://www.yellowpages.com.sg/">Singapore Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([48.669026, 19.699024], {
-			balloonContentHeader: 'Slovakia',
-			balloonContent: 'Business registry</br><a href="https://www.orsr.sk/search_subjekt.asp?lan=en">orsr.sk</a> </br>Venicle information</br><a target="_blank" href="https://www.stkonline.sk/spz/">stkonline.sk</a></br>Court records</br><a href="https://www.slov-lex.sk/vseobecne-sudy-sr">Slov-lex</a></br>Yellow/White pages</br><a href="http://www.zlatestranky.sk/">Slovakia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([35.907757, 127.766922], {
-			balloonContentHeader: 'South Korea',
-			balloonContent: 'Business registry</br><a href="https://www.ftc.go.kr/www/bizCommList.do?key=232">ftc.go.kr</a></br>Yellow/White pages</br><a href="http://www.southkoreapages.com/">Korea Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([38.861034, 71.276093], {
-			balloonContentHeader: 'Tajikistan',
-			balloonContent: 'Business registry</br><a href="https://andoz.tj/Fehrist/Ur?culture=ru-RU">andoz.tj</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([55.378051, -3.435973], {
-			balloonContentHeader: 'United Kingdom',
-			balloonContent: 'Business registry</br><a href="https://beta.companieshouse.gov.uk/search/companies">beta.companieshouse.gov.uk</a></br>Transport live map</br><a target="_blank" href="http://www.essexbus.info/map.html">Essexbus.info</a></br>Passengers lists</br><a target="_blank" href="https://search.findmypast.co.uk/search-world-records/passenger-lists-leaving-uk-1890-1960">Leaving UK 1890-1960</a></br><a target="_blank" href="https://globalstories.ssgreatbritain.org/">Global Stories: passengers and crew of SS Great Britain</a> </br>Venicle information</br><a target="_blank" href="https://www.carcheck.co.uk/reg">carcheck.co.uk</a></br>Yellow/White pages</br><a href="http://www.scoot.co.uk/">UK Business Directory</a></br><a href="https://www.yell.com/">UK Online Business Directory</a></br><a href="http://www.the-internet-pages.co.uk/">Business Directory</a></br><a href="http://www.ukphonebook.com/">UK Phone Book</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([41.377491, 64.585262], {
-			balloonContentHeader: 'Uzbekistan',
-			balloonContent: 'Business registry</br><a href="https://orginfo.uz/">orginfo.uz</a></br>Court records</br><a href="https://public.sud.uz/#!/sign/criminal">Supreme court of the Respublic of Uzbekistan (Criminal cases)</a></br><a href="https://public.sud.uz/#!/sign/economy">Supreme court of the Respublic of Uzbekistan (Economic cases)</a></br><a href="https://public.sud.uz/#!/sign/administrative">Supreme court of the Respublic of Uzbekistan (Administrative cases)</a></br><a href="https://public.sud.uz/#!/sign/civil">Supreme court of the Respublic of Uzbekistan (Civil cases)</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([14.058324, 108.277199], {
-			balloonContentHeader: 'Vietnam',
-			balloonContent: 'Business registry</br><a href="https://dichvuthongtin.dkkd.gov.vn/inf/default.aspx">dichvuthongtin.dkkd.gov.vn</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([34.05223, -118.24368], {
-			balloonContentHeader: 'Los Angeles',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://www.ladotbus.com/map">Ladotbus.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([41.00, -72.5], {
-			balloonContentHeader: 'Connecticut',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://seatbuslive.com/map">seatbuslive.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([38.70824, -121.32995], {
-			balloonContentHeader: 'Antelope Valley',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://track-it.avta.com/">track-it.avta.com</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([56.946, 24.10589], {
-			balloonContentHeader: 'Riga',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://saraksti.rigassatiksme.lv/index.html#riga/map,page">saraksti.rigassatiksme.lv</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([46.10012, -77.49949], {
-			balloonContentHeader: 'Ontario',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://www.grt.ca/en/schedules-maps/desktop-realtime-map.aspx">grt.ca</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([60.45148, 22.26869], {
-			balloonContentHeader: 'Turku',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://live.foli.fi/lemap">live.foli.fi</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([59.43696, 24.75353], {
-			balloonContentHeader: 'Tallin',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://gis.ee/tallinn/">gis.ee</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([52.52437, 13.41053], {
-			balloonContentHeader: 'Berlin',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://www.vbb.de/fahrinfo/">vbb.de</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([52.132633, 5.291266], {
-			balloonContentHeader: 'Netherlands',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://ovzoeker.nl/">ovzoeker.nl</a></br>Venicle information</br><a target="_blank" href="https://www.kentekencheck.nl/kenteken">kentekencheck.nl</a></br>Court records</br><a href="https://uitspraken.rechtspraak.nl/">Rechtspraak</a></br>Yellow/White pages</br><a href="http://www.detelefoongids.nl/">Netherlands Telephone Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([37.566, 126.9784], {
-			balloonContentHeader: 'Seoul',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://bus.go.kr/searchResult6.jsp">bus.go.kr</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([54.68916, 25.2798], {
-			balloonContentHeader: 'Vilnius',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://www.stops.lt/vilnius/#vilnius/map">stops.lt</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([69.6489, 18.95508], {
-			balloonContentHeader: 'Tromse',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://tromsreise.no/">tromsreise.no</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([44.43225, 26.10626], {
-			balloonContentHeader: 'Budapest',
-			balloonContent: 'Transport live map</br><a target="_blank" href="https://info.stbsa.ro/">info.stbsa.ro</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([43, -75], {
-			balloonContentHeader: 'New York',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.castlegarden.org/searcher.php">Castle Garden: 1820 - 1913 </a></br><a target="_blank" href="https://heritage.statueofliberty.org/">Ellis Island Passenger Search database New York 1820 - 1957</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([29.30135, -94.7977], {
-			balloonContentHeader: 'Galveston',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="http://ghf.destinationnext.com/immigration/Search.aspx">Galveston Seaport Immigration Database 1844 - 1967</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([52.49, 4.2], {
-			balloonContentHeader: 'Scotland',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.abdn.ac.uk/emigration/search.html">The Scottish Emigration Database 1890 - 1960</a></br>Court records</br><a href="https://www.scotcourts.gov.uk/search-judgments/high-court">Scottish courts and tribunals (Hight Court)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/court-of-session">Scottish courts and tribunals (Court of Session)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-court">Scottish courts and tribunals (Sheriff court)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-appeal-court-judgment">Scottish courts and tribunals (Sheriff appeal court — criminal)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-appeal-court---civil">Scottish courts and tribunals (Sheriff appeal court —   civil)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/national-personal-injury-judgments">Scottish courts and tribunals (National Personal Injury Judgments)</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([50.90395, -1.40428], {
-			balloonContentHeader: 'Southampton',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.lva.virginia.gov/exhibits/titanic/passengers.php">Titanic Passengers 1912</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([39.04, -76.64], {
-			balloonContentHeader: 'Maryland',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.thearkandthedove.com/">The ark of the dove</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([64.20, -149.49], {
-			balloonContentHeader: 'Alaska',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/1056/">Ancestry: "All Alaska, U.S., Lists of Alien Arrivals, 1906-1956"</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([39.29, -76.61], {
-			balloonContentHeader: 'Baltimore',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/8679/">Ancestry: "Baltimore, Passenger Lists, 1820-1964"</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([42.40, -71.38], {
-			balloonContentHeader: 'Massachusetts',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/8745/">Ancestry: "All Massachusetts, U.S., Arriving Passenger and Crew Lists, 1820-1963"</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([19.89, 155.58], {
-			balloonContentHeader: 'Hawaii',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextoc/page/about">Hawaii.gov: "Chinese Passenger Manifests" 1843-1900</a></br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextoj/page/about">Japanese Passenger Manifests" 1843-1900</a></br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextop/page/about">Hawaii.gov: "Portuguese Passenger Manifests" 1843-1900</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([21.30, 157.85], {
-			balloonContentHeader: 'Honolulu',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/1502/">Hawaii.gov: "Honolulu, Hawaii, U.S., Arriving and Departing Passenger and Crew Lists, 1900-1959"</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([55.67, 12.56], {
-			balloonContentHeader: 'Copenhagen',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.udvandrerarkivet.dk/udvandrerprotokollerne/">Copenhagen Police Emigrant protocols (Denmark, up to 1908)</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([53.07, 8.80], {
-			balloonContentHeader: 'Bremen',
-			balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.passengerlists.de/">Bremen Passengers List 1920 - 1939</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#98fb98'
-		})).add(new ymaps.Placemark([55.92497, 37.97218], {
-			balloonContentHeader: '@cyb_detective town',
-			balloonContent: '<a target="_blank" href="https://twitter.com/cyb_detective">Twitter</a></br><a target="_blank" href="https://t.me/cybdetective">Telegram</a></br><a target="_blank" href="https://www.getrevue.co/profile/cyb_detective?via=twitter-profile-webview">Email Newsletter</a></br><a target="_blank" href="https://github.com/cipher387">Github</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#000000'
-		})).add(new ymaps.Placemark([48.379433, 31.16558], {
-			balloonContentHeader: 'Ukraine',
-			balloonContent: 'Cadastral map</br><a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all">map.land.gov.ua</a></br>Transport live map</br><a target="_blank" href="https://www.eway.in.ua/en/cities/kyiv/routes">eway.in.ua</a></br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a></br>Yellow/White pages</br><a href="http://www.ukraine.org/www.ukrainet.lviv.ua/yellow/pages.htm">Ukraine Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-14.235004, -51.92528], {
-			balloonContentHeader: 'Brazil',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a></br>Yellow/White pages</br><a href="http://www.brazilbiz.com.br/">Brazil Biz Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([53.72, -127.64], {
-			balloonContentHeader: 'British Columbia',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#0000FF'
-		})).add(new ymaps.Placemark([42.733883, 25.48583], {
-			balloonContentHeader: 'Bulgaria',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([56.130366, -106.346771], {
-			balloonContentHeader: 'Canada',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a></br>Yellow/White pages</br><a href="http://www.canadianbusinessdirectory.ca/">Canadian Business Directory</a></br><a href="http://www.yellowpages.ca/">Yellow Pages Canada</a></br><a href="http://www.canada411.ca/">Canada Business Telephone Directory</a></br><a href="http://www.canpages.ca/">Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([42.315407, 43.356892], {
-			balloonContentHeader: 'Georgia',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([53.41291, -8.24389], {
-			balloonContentHeader: 'Ireland',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([30.585164, 36.238414], {
-			balloonContentHeader: 'Jordan',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([35.937496, 14.375416], {
-			balloonContentHeader: 'Malta',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([46.862496, 103.846656], {
-			balloonContentHeader: 'Mongolia',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([21.512583, 55.923255], {
-			balloonContentHeader: 'Oman',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([30.375321, 69.345116], {
-			balloonContentHeader: 'Pakistan',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a></br>Yellow/White pages</br><a href="http://www.paginasamarillas.com.ni/">Nicaragua Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([23.424076, 53.847818], {
-			balloonContentHeader: 'United Arab Emirates',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([15.552727, 48.516388], {
-			balloonContentHeader: 'Yemen',
-			balloonContent: '</br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([25.930414, 50.637772], {
-			balloonContentHeader: 'Bahrain',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.bahrainyellowpages.com.bh/">Bahrain Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-16.290154, -63.588653], {
-			balloonContentHeader: 'Bolivia',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://bolivia.paginasamarillas.com/">Bolivia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-35.675147, -71.542969], {
-			balloonContentHeader: 'Chile',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.galaxy.com/rvw18197-841205/Chile-Electronic-Yellow-Pages.htm">Chile Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([4.570868, -74.297333], {
-			balloonContentHeader: 'Colombia',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.quehubo.com/">Colombian Yellow Pages</a></br><a href="http://www.paginasamarillas.com.co/">Colombian Business Information/Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([9.748917, -83.753428], {
-			balloonContentHeader: 'Costa Rica',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://costa-rica.paginasamarillas.com/">Costa Rica Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-1.831239, -78.183406], {
-			balloonContentHeader: 'Ecuador',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.paginasamarillas.info.ec/">Ecuador Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([26.820553, 30.802498], {
-			balloonContentHeader: 'Egypt',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.com.eg/en">Egypt Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([7.946527, -1.023194], {
-			balloonContentHeader: 'Ghana',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://yellowpages.com.gh/Home.aspx">Yellow Pages Ghana</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([39.074208, 21.824312], {
-			balloonContentHeader: 'Greece',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.xo.gr/">Greece Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([15.199999, -86.241905], {
-			balloonContentHeader: 'Honduras',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://honduras.paginasamarillas.com/">Honduras Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([32.427908, 53.688046], {
-			balloonContentHeader: 'Iran',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.iranyellowpages.net/en/">Iran Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-0.023559, 37.906193], {
-			balloonContentHeader: 'Kenya',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpageskenya.com/">Kenya Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([26.3351, 17.228331], {
-			balloonContentHeader: 'Libya',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.ly/en/">Libya Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([55.169438, 23.881275], {
-			balloonContentHeader: 'Lithuania',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.visalietuva.lt/">Lithuania Yellow Pages</a></br><a href="http://imones.lrytas.lt/">Lithuania Business Directory</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([49.815273, 6.129583], {
-			balloonContentHeader: 'Luxembourg',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.infobel.com/en/luxembourg/">Luxembourg White Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([4.210484, 101.975766], {
-			balloonContentHeader: 'Malaysia',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.my/">Malaysia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([17.570692, -3.996166], {
-			balloonContentHeader: 'Mali',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.malipages.com/en/">Mali Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([23.634501, -102.552784], {
-			balloonContentHeader: 'Mexico',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.seccionamarilla.com.mx/">Mexico Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([47.411631, 28.369885], {
-			balloonContentHeader: 'Moldova',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.md/">Moldova Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([21.913965, 95.956223], {
-			balloonContentHeader: 'Myanmar',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.myanmaryellowpages.biz/">Myanmar Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([12.865416, -85.207229], {
-			balloonContentHeader: 'Nicaragua',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.paginasamarillas.com.ni/">Nicaragua Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([45.943161, 24.96676], {
-			balloonContentHeader: 'Romania',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://yellowpages.com.ro/">Romania Yellow Pages</a></br><a href="http://www.rolocal.ro/">Romania Local Search</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([46.151241, 14.995463], {
-			balloonContentHeader: 'Slovenia',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://yellow3.eunet.si/yellowpage/a/">Slovenia Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([-30.559482, 22.937506], {
-			balloonContentHeader: 'South Africa',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.co.za/">South Africa Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([60.128161, 18.643501], {
-			balloonContentHeader: 'Sweden',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://www.proff.se/">Sweden Business Finder</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		})).add(new ymaps.Placemark([6.42375, -66.58973], {
-			balloonContentHeader: 'Venezuela',
-			balloonContent: '</br>Yellow/White pages</br><a href="http://venezuela.paginasamarillas.com/">Venezuela Yellow Pages</a>'
-		}, {
-			preset: 'islands#governmentCircleIcon',
-			iconColor: '#ff0000'
-		}));
-	}
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [35.00, 1.00],
+        zoom: 4
+    }, {
+        searchControlProvider: 'yandex#search'
+    });
+    myMap.geoObjects
+    .add(new ymaps.Placemark([55.92497, 37.97218], { balloonContentHeader: '@cyb_detective town', balloonContent: '<a target="_blank" href="https://twitter.com/cyb_detective">Twitter</a></br><a target="_blank" href="https://t.me/cybdetective">Telegram</a></br><a target="_blank" href="https://www.getrevue.co/profile/cyb_detective?via=twitter-profile-webview">Email Newsletter</a></br><a target="_blank" href="https://github.com/cipher387">Github</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#000000'}))
+.add(new ymaps.Placemark([64.20, -149.49], { balloonContentHeader: 'Alaska', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/1056/">Ancestry: "All Alaska, U.S., Lists of Alien Arrivals, 1906-1956"</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#0000FF'}))
+.add(new ymaps.Placemark([41.153332, 20.168331], { balloonContentHeader: 'Albania', balloonContent: 'Cadastral map</br><a href="https://geoportal.asig.gov.al/map/?fc_name=alb_p_asig&auto=true">geoportal.asig.gov.al</a></br>Court records</br><a href="http://www.gjykata.gov.al/gjykata-e-lart%C3%AB/gjykata-e-lart%C3%AB/c%C3%ABshtjet-gjyq%C3%ABsore/c%C3%ABshtjet-civile/">Supreme Court of the Republic of Albania (Civil case)</a></br><a href="http://www.gjykata.gov.al/gjykata-e-lart%C3%AB/gjykata-e-lart%C3%AB/c%C3%ABshtjet-gjyq%C3%ABsore/c%C3%ABshtjet-penale/">Supreme Court of the Republic of Albania (Criminal cases)</a></br>Yellow/White pages</br><a href="http://albanianyellowpages.com">Albania Yellow/White Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([28.033886, 1.659626], { balloonContentHeader: 'Algeria', balloonContent: 'Business registry</br><a href="https://sidjilcom.cnrc.dz/">sidjilcom.cnrc.dz</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([38.70824, -121.32995], { balloonContentHeader: 'Antelope Valley', balloonContent: 'Transport live map</br><a target="_blank" href="https://track-it.avta.com/">track-it.avta.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([17.060816, -61.796428], { balloonContentHeader: 'Antigua & Barbuda', balloonContent: 'Business registry</br><a href="https://abipco.gov.ag/">abipco.gov.ag</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-38.416097, -63.616672], { balloonContentHeader: 'Argentina', balloonContent: 'Business registry</br><a href="https://www.argentina.gob.ar/aaip/datospersonales/reclama">argentina.gob.ar</a></br>Yellow/White pages</br><a href="http://amarillas.emol.com/home">Argentina White/Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([40.069099, 45.038189], { balloonContentHeader: 'Armenia', balloonContent: 'Cadastral map</br><a href="https://www.e-cadastre.am/customer/login/map/1">e-cadastre.am</a></br>Business registry</br><a href="http://www.petekamutner.am/tsOS_Taxpayers.aspx">petekamutner.am</a></br>Court records</br><a href="https://www.arlis.am/">Legal information system of Armenia</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-25.274398, 133.775136], { balloonContentHeader: 'Australia', balloonContent: 'Cadastral map</br><a href="https://www.planningportal.nsw.gov.au/spatialviewer/#/find-a-property/address">planningportal.nsw.gov.au</a></br>Business registry</br><a href="https://abr.business.gov.au/Search/">abr.business.gov.au</a></br>Transport live map</br><a target="_blank" href="https://anytrip.com.au/">anytrip.com.au</a></br>Passengers lists</br><a target="_blank" href="https://recordsearch.naa.gov.au/">recordsearch.naa.gov.au</a></br>Yellow/White pages</br><a href="http://www.whitepages.com.au/">Australian White  Pages</a></br><a href="http://www.yellowpages.com.au/">Australian Yellow Pages</a'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([47.516231, 14.550072], { balloonContentHeader: 'Austria', balloonContent: 'Business registry</br><a href="https://www.firmenabc.at/">firmenabc.at</a></br>Yellow/White pages</br><a href="http://www.herold.at/">Austria Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([40.143105, 47.576927], { balloonContentHeader: 'Azerbaijan', balloonContent: 'Business registry</br><a href="https://www.e-taxes.gov.az/ebyn/commersialChecker.jsp">e-taxes.gov.az</a></br>Court records</br><a href="https://e-mehkeme.gov.az/Public/Cases?courtid=">Azerbaijan electronic courts system</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([25.03428, -77.39628], { balloonContentHeader: 'Bahamas', balloonContent: 'Business registry</br><a href="https://www.bahamas.gov.bs/wps/myportal/public/rgd/company/company-search">bahamas.gov.bs</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([25.930414, 50.637772], { balloonContentHeader: 'Bahrain', balloonContent: '</br>Yellow/White pages</br><a href="http://www.bahrainyellowpages.com.bh/">Bahrain Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([39.29, -76.61], { balloonContentHeader: 'Baltimore', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/8679/">Ancestry: "Baltimore, Passenger Lists, 1820-1964"</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#0000FF'}))
+.add(new ymaps.Placemark([53.709807, 27.953389], { balloonContentHeader: 'Belarus', balloonContent: 'Cadastral map</br><a href="https://map.nca.by/">map.nca.by</a></br>Business registry</br><a href="https://tsouz.belgiss.by/#!/tsouz/certifs">tsouz.belgiss.by</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([50.503887, 4.469936], { balloonContentHeader: 'Belgium', balloonContent: 'Business registry</br><a href="https://kbopub.economie.fgov.be/kbopub/zoeknaamfonetischform.html">kbopub.economie.fgov.be</a></br>Yellow/White pages</br><a href="http://www.1207.be/">Belgium White Pages</a></br><a href="http://www.pagesdor.be/">Golden Pages Belgium</a></br><a href="http://www.goudengids.be/">Yellow Pages</a></br><a href="http://www.infobel.be">Infobel Belgium Telephone Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([17.189877, -88.49765], { balloonContentHeader: 'Belize', balloonContent: 'Business registry</br><a href="https://companysearch.bz/public_search/">companysearch.bz</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([52.52437, 13.41053], { balloonContentHeader: 'Berlin', balloonContent: 'Transport live map</br><a target="_blank" href="https://www.vbb.de/fahrinfo/">vbb.de</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-16.290154, -63.588653], { balloonContentHeader: 'Bolivia', balloonContent: '</br>Yellow/White pages</br><a href="http://bolivia.paginasamarillas.com/">Bolivia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([43.915886, 17.679076], { balloonContentHeader: 'Bosnia and Herzegovina', balloonContent: 'Business registry</br><a href="https://search.bisnode.rs/search/?c=ba&q=">search.bisnode.rs</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([53.07, 8.80], { balloonContentHeader: 'Bremen', balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.passengerlists.de/">Bremen Passengers List 1920 - 1939</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([44.43225, 26.10626], { balloonContentHeader: 'Budapest', balloonContent: 'Transport live map</br><a target="_blank" href="https://info.stbsa.ro/">info.stbsa.ro</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([7.369722, 12.354722], { balloonContentHeader: 'Cameroon', balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/Cameroon/en/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([19.513469, -80.566956], { balloonContentHeader: 'Cayman Islands', balloonContent: 'Business registry</br><a href="https://www.cima.ky/search-entities-cima">cima.ky</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-35.675147, -71.542969], { balloonContentHeader: 'Chile', balloonContent: '</br>Yellow/White pages</br><a href="http://www.galaxy.com/rvw18197-841205/Chile-Electronic-Yellow-Pages.htm">Chile Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([35.86166, 104.195397], { balloonContentHeader: 'China', balloonContent: 'Business registry</br><a href="https://xinyong.1688.com/">xinyong.1688.com</a></br>Court records</br><a href="https://splcgk.court.gov.cn/lcgkw/user#">China Judicial Process Information Online</a></br><a href="https://wenshu.court.gov.cn/">China Jugments Online</a></br>Yellow/White pages</br><a href="http://www.chinavista.com/business/directory/home.html">China Vista Yellow Pages</a></br><a href="http://www.chinavista.com/business/directory/home.html">China Vista Yellow Pages</a></br><a href="http://www.yellowpages-china.com/">China Yellow Pages</a></br><a href="http://www.yellowpages-china.com/">China Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([4.570868, -74.297333], { balloonContentHeader: 'Colombia', balloonContent: '</br>Yellow/White pages</br><a href="http://www.quehubo.com/">Colombian Yellow Pages</a></br><a href="http://www.paginasamarillas.com.co/">Colombian Business Information/Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([41.00, -72.5], { balloonContentHeader: 'Connecticut', balloonContent: 'Transport live map</br><a target="_blank" href="https://seatbuslive.com/map">seatbuslive.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-21.236736, -159.777671], { balloonContentHeader: 'Cook Islands', balloonContent: 'Business registry</br><a href="https://registry.justice.gov.ck/corp/search.aspx">registry.justice.gov.ck</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([55.67, 12.56], { balloonContentHeader: 'Copenhagen', balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.udvandrerarkivet.dk/udvandrerprotokollerne/">Copenhagen Police Emigrant protocols (Denmark, up to 1908)</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([9.748917, -83.753428], { balloonContentHeader: 'Costa Rica', balloonContent: '</br>Yellow/White pages</br><a href="http://costa-rica.paginasamarillas.com/">Costa Rica Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([45.1, 15.2], { balloonContentHeader: 'Croatia', balloonContent: 'Business registry</br><a href="https://www.companywall.hr/">companywall.hr</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([12.16957, -68.99002], { balloonContentHeader: 'Curacao', balloonContent: 'Business registry</br><a href="http://www.curacao-chamber.cw/services/registry/search-company">curacao-chamber.cw</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([35.126413, 33.429859], { balloonContentHeader: 'Cyprus', balloonContent: 'Cadastral map</br><a href="http://eservices.dls.moi.gov.cy/#/national/geoportalmapviewer">eservices.dls.moi.gov.cy</a></br>Business registry</br><a href="https://efiling.drcor.mcit.gov.cy/DrcorPublic/SearchForm.aspx">efiling.drcor.mcit.gov.cy</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([49.817492, 15.472962], { balloonContentHeader: 'Czech Respublic', balloonContent: 'Business registry</br><a href="https://or.justice.cz/ias/ui/rejstrik-$firma?">or.justice.cz</a></br>Venicle information</br><a target="_blank" href="https://spz.penize.cz/">spz.penize.cz</a></br>Yellow/White pages</br><a href="http://www.zlatestranky.cz/">Czech Catalog &amp; Phonebook</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([56.26392, 9.501785], { balloonContentHeader: 'Denmark', balloonContent: 'Cadastral map</br><a href="https://kort.matrikel.dk/spatialmap">kort.matrikel.dk</a></br>Business registry</br><a href="https://datacvr.virk.dk/data/">datacvr.virk.dk</a> </br>Venicle information</br><a target="_blank" href="https://www.nummerplade.net/nummerplade/">nummerplade.net</a></br>Court records</br><a href="https://www.domstol.dk/">Denmark Domstole</a></br>Yellow/White pages</br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.909.dk/">Danish Local Search</a></br><a href="http://www.yellowpages.dk/">Danish Yellow Pages</a></br><a href="http://www.denmark.net/business">Danish Business Directory</a></br><a href="http://www.909.dk/">Danish Local Search</a></br><a href="http://www.yellowpages.dk/">Danish Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([15.414999, -61.370976], { balloonContentHeader: 'Dominica', balloonContent: 'Business registry</br><a href="https://efiling.drcor.mcit.gov.cy/DrcorPublic/SearchForm.aspx">efiling.drcor.mcit.gov.cy</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-1.831239, -78.183406], { balloonContentHeader: 'Ecuador', balloonContent: '</br>Yellow/White pages</br><a href="http://www.paginasamarillas.info.ec/">Ecuador Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([26.820553, 30.802498], { balloonContentHeader: 'Egypt', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.com.eg/en">Egypt Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([58.595272, 25.013607], { balloonContentHeader: 'Estonia', balloonContent: 'Cadastral map</br><a href="https://xgis.maaamet.ee/xgis2/page/app/maainfo">xgis.maaamet.ee</a> </br>Venicle information</br><a target="_blank" href="https://eteenindus.mnt.ee/public/soidukTaustakontroll.jsf">eteenindus.mnt.ee</a></br>Court records</br><a href="https://www.riigiteataja.ee/kohtulahendid/koik_menetlused.html">Ministry of Justice of Estonia</a></br>Yellow/White pages</br><a href="http://www.yellowpages.ee/en/">Estonia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([9.145, 40.489673], { balloonContentHeader: 'Ethiopia', balloonContent: 'Cadastral map</br><a href="http://ethiopian.portal.miningcadastre.com/MapPage.aspx?PageID=a16a9300-7c58-4f81-9e5c-97e13b22b0c6">ethiopian.portal.miningcadastre.com</a></br>Business registry</br><a href="https://ariregister.rik.ee/">ariregister.rik.ee</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([61.892635, -6.911806], { balloonContentHeader: 'Faroe Islands', balloonContent: 'Business registry</br><a href="https://www.skraseting.fo/en/companies/search-companies/">skraseting.fo</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([61.92411, 25.748151], { balloonContentHeader: 'Finland', balloonContent: 'Cadastral map</br><a href="https://asiointi.maanmittauslaitos.fi/karttapaikka/">asiointi.maanmittauslaitos.fi</a></br>Business registry</br><a href="https://www.asiakastieto.fi/yritykset/">asiakastieto.fi</a></br>Venicle information</br><a target="_blank" href="https://www.biltema.fi/auton-varaosahaku/">biltema.fi</a></br>Court records</br><a href="https://www.finlex.fi/fi/oikeus/">Finlex</a></br>Yellow/White pages</br><a href="http://www.fonecta.fi/">Finland Yellow Pages</a></br><a href="http://www.keltaisetsivut.fi/">Finland Yellow Pages &amp; Phonebook</a></br><a href="http://www.numeronetti.fi/">Finland White Pages</a></br><a href="http://www.yritystele.fi/">Finland Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([46.227638, 2.213749], { balloonContentHeader: 'France', balloonContent: 'Cadastral map</br><a href="https://www.cadastre.gouv.fr/scpc/accueil.do">cadastre.gouv.fr</a></br>Business registry</br><a href="https://www.verif.com/">verif.com</a> </br>Venicle information</br><a target="_blank" href="https://siv-auto.fr/">siv-auto.fr</a></br>Yellow/White pages</br><a href="http://www.pagesjaunes.fr/?lang=en">French Yellow Pages</a></br>Transport live map</br><a href="https://www.sncf.com/fr/itineraire-reservation/geolocalisation">sncf.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([29.30135, -94.7977], { balloonContentHeader: 'Galveston', balloonContent: 'Passengers lists</br><a target="_blank" href="http://ghf.destinationnext.com/immigration/Search.aspx">Galveston Seaport Immigration Database 1844 - 1967</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([51.165691, 10.451526], { balloonContentHeader: 'Germany', balloonContent: 'Business registry</br><a href="https://www.unternehmensregister.de/ureg/">unternehmensregister.de</a></br>Yellow/White pages</br><a href="http://www.klicktel.de/branchenbuch">German Business Directory</a></br><a href="http://www.gelbeseiten.de/">Gelbe Seiten Yellow Pages</a></br><a href="http://www.teleauskunft.de/">German Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([7.946527, -1.023194], { balloonContentHeader: 'Ghana', balloonContent: '</br>Yellow/White pages</br><a href="http://yellowpages.com.gh/Home.aspx">Yellow Pages Ghana</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([39.074208, 21.824312], { balloonContentHeader: 'Greece', balloonContent: '</br>Yellow/White pages</br><a href="http://www.xo.gr/">Greece Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([15.783471, -90.230759], { balloonContentHeader: 'Guatemala', balloonContent: 'Business registry</br><a href="http://econsultas.registromercantil.gob.gt">econsultas.registromercantil.gob.gt</a></br>Yellow/White pages</br><a href="http://www.paginasamarillas.com.gt/">Guatemala Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([49.465691, -2.585278], { balloonContentHeader: 'Guernsey', balloonContent: 'Business registry</br><a href="https://www.greg.gg/webCompSearch.aspx">greg.gg</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([9.945587, -9.696645], { balloonContentHeader: 'Guinea', balloonContent: 'Cadastral map</br><a href="http://guinee.cadastreminier.org/fr/">guinee.cadastreminier.org</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([19.89, 155.58], { balloonContentHeader: 'Hawaii', balloonContent: 'Passengers lists</br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextoc/page/about">Hawaii.gov: "Chinese Passenger Manifests" 1843-1900</a></br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextoj/page/about">Japanese Passenger Manifests" 1843-1900</a></br><a target="_blank" href="https://digitalcollections.hawaii.gov/greenstone3/library/collection/indextop/page/about">Hawaii.gov: "Portuguese Passenger Manifests" 1843-1900</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#0000FF'}))
+.add(new ymaps.Placemark([10.82302, 106.62965], { balloonContentHeader: 'Ho Chi Minh City', balloonContent: 'Cadastral map</br><a href="https://thongtinquyhoach.hochiminhcity.gov.vn/">thongtinquyhoach.hochiminhcity.gov.vn</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([15.199999, -86.241905], { balloonContentHeader: 'Honduras', balloonContent: '</br>Yellow/White pages</br><a href="http://honduras.paginasamarillas.com/">Honduras Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([21.30, 157.85], { balloonContentHeader: 'Honolulu', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/1502/">Hawaii.gov: "Honolulu, Hawaii, U.S., Arriving and Departing Passenger and Crew Lists, 1900-1959"</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([47.162494, 19.503304], { balloonContentHeader: 'Hungary', balloonContent: 'Business registry</br><a href="https://www.adoszam.hu/">adoszam.hu</a></br>Court records</br><a href="https://eakta.birosag.hu/anonimizalt-hatarozatok">National Court Office</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([20.593684, 78.96288], { balloonContentHeader: 'India', balloonContent: 'Business registry</br><a href="https://www.mca.gov.in/mcafoportal/viewCompanyMasterData.do">mca.gov.in</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-0.789275, 113.921327], { balloonContentHeader: 'Indonesia', balloonContent: 'Business registry</br><a href="https://ahu.go.id/pencarian/profil-pt">ahu.go.id</a></br>Court records</br><a href="https://kepaniteraan.mahkamahagung.go.id/perkara/">Registrar of the Supreme Court of the Republic of Indonesia</a></br>Yellow/White pages</br><a href="http://www.yellowpages.co.id/">Indonesia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([32.427908, 53.688046], { balloonContentHeader: 'Iran', balloonContent: '</br>Yellow/White pages</br><a href="http://www.iranyellowpages.net/en/">Iran Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([54.236107, -4.548056], { balloonContentHeader: 'Isle of Man', balloonContent: 'Business registry</br><a href="https://services.gov.im/ded/services/companiesregistry/companysearch.iom">services.gov.im</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([31.046051, 34.851612], { balloonContentHeader: 'Israel', balloonContent: 'Business registry</br><a href="https://ica.justice.gov.il/AnonymousRequest/Search">ica.justice.gov.il</a></br>Court records</br><a href="https://supreme.court.gov.il/Pages/fullsearch.aspx">Supreme court of Israel</a></br>Yellow/White pages</br><a href="http://ie.kompass.com/">Kompass Business Directory</a></br><a href="http://www.yellow.com/376.html">Israel Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([41.87194, 12.56738], { balloonContentHeader: 'Italy', balloonContent: 'Business registry</br><a href="https://www.empresite.it/">empresite.it</a></br>Venicle information</br><a target="_blank" href="https://www.sevim.it/gratis/targa.asp">sevim.it</a></br>Yellow/White pages</br><a href="http://www.pronto.it/">Italy Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([7.539989, -5.54708], { balloonContentHeader: 'Ivory Coast', balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/CoteDIvoire/FR/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([36.204824, 138.252924], { balloonContentHeader: 'Japan', balloonContent: 'Business registry</br><a href="https://www1.touki.or.jp/gateway.html">touki.or.jp</a></br>Court records</br><a href="https://www.courts.go.jp/app/hanrei_jp/search1">Courts in Japan</a></br>Yellow/White pages</br><a href="http://itp.ne.jp/">Japan Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([49.214439, -2.13125], { balloonContentHeader: 'Jersey', balloonContent: 'Business registry</br><a href="https://www.jerseyfsc.org/registry/registry-entities/">jerseyfsc.org</a></br>Court records</br><a href="https://www.jerseylaw.je/judgments/Pages/Search.aspx">Jersey Law</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([48.019573, 66.923684], { balloonContentHeader: 'Kazakhstan', balloonContent: 'Cadastral map</br><a href="http://www.aisgzk.kz/aisgzk/ru/content/maps/">aisgzk.kz</a></br>Business registry</br><a href="https://pk.uchet.kz/">pk.uchet.kz</a></br>Court records</br><a href="https://office.sud.kz/lawsuit/">Supreme Court of Kazakhstan</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-0.023559, 37.906193], { balloonContentHeader: 'Kenia', balloonContent: 'Cadastral map</br><a href="https://portal.miningcadastre.go.ke/Site/EmbeddedMapPortal.aspx?PageID=f877b9bc-d68a-415f-b051-5048ff5a68b0">portal.miningcadastre.go.ke</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-0.023559, 37.906193], { balloonContentHeader: 'Kenya', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpageskenya.com/">Kenya Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([42.602636, 20.902977], { balloonContentHeader: 'Kosovo', balloonContent: 'Cadastral map</br><a href="http://geoportal.rks-gov.net">geoportal.rks-gov.net</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([41.20438, 74.766098], { balloonContentHeader: 'Kyrgyzstan', balloonContent: 'Business registry</br><a href="https://salyk.kg/TaxPayer/Info">salyk.kg</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([56.879635, 24.603189], { balloonContentHeader: 'Latvia', balloonContent: 'Cadastral map</br><a href="https://www.kadastrs.lv/graphical_data/show">kadastrs.lv</a></br>Business registry</br><a href="http://www.firmas.lv/">firmas.lv</a></br>Court records</br><a href="https://tiesas.lv/e-pakalpojumi/tiesvedibas-gaita">Court Administration of Latvia</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([6.428055, -9.429499], { balloonContentHeader: 'Liberia', balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/liberia/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([26.3351, 17.228331], { balloonContentHeader: 'Libya', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.ly/en/">Libya Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([55.169438, 23.881275], { balloonContentHeader: 'Lithuania', balloonContent: '</br>Yellow/White pages</br><a href="http://www.visalietuva.lt/">Lithuania Yellow Pages</a></br><a href="http://imones.lrytas.lt/">Lithuania Business Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([55.169438, 23.881275], { balloonContentHeader: 'Lithuanian', balloonContent: 'Business registry</br><a href="https://www.registrucentras.lt/jar/p/index.php">registrucentras.lt</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([51.50853, -0.12574], { balloonContentHeader: 'London', balloonContent: 'Cadastral map</br><a href="https://apps.london.gov.uk/public-land/">apps.london.gov.uk</a></br>Transport live map</br><a target="_blank" href="https://traintimes.org.uk/map/london-buses/#73">Live London Buses</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([34.05223, -118.24368], { balloonContentHeader: 'Los Angeles', balloonContent: 'Transport live map</br><a target="_blank" href="https://www.ladotbus.com/map">Ladotbus.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([49.815273, 6.129583], { balloonContentHeader: 'Luxembourg', balloonContent: '</br>Yellow/White pages</br><a href="http://www.infobel.com/en/luxembourg/">Luxembourg White Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-13.254308, 34.301525], { balloonContentHeader: 'Malawi', balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/malawi/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([4.210484, 101.975766], { balloonContentHeader: 'Malaysia', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.my/">Malaysia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([17.570692, -3.996166], { balloonContentHeader: 'Mali', balloonContent: '</br>Yellow/White pages</br><a href="http://www.malipages.com/en/">Mali Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([35.937496, 14.375416], { balloonContentHeader: 'Malta', balloonContent: '</br>Court records</br><a href=https://ecourts.gov.mt/onlineservices/CivilCases">Search Civil Cases</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([39.04, -76.64], { balloonContentHeader: 'Maryland', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.thearkandthedove.com/">The ark of the dove</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#0000FF'}))
+.add(new ymaps.Placemark([42.40, -71.38], { balloonContentHeader: 'Massachusetts', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.ancestry.com/search/collections/8745/">Ancestry: "All Massachusetts, U.S., Arriving Passenger and Crew Lists, 1820-1963"</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#0000FF'}))
+.add(new ymaps.Placemark([21.00789, -10.940835], { balloonContentHeader: 'Mauritania', balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/Mauritania/fr/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-20.348404, 57.552152], { balloonContentHeader: 'Mauritius', balloonContent: 'Business registry</br><a href="https://companies.govmu.org:4343/MNSOnlineSearch/">companies.govmu.org</a></br>Court records</br><a href="https://supremecourt.govmu.org/_Layouts/CLIS.DMS/Judgment/SearchPage.aspx">Supreme Court of Mauritius</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([23.634501, -102.552784], { balloonContentHeader: 'Mexico', balloonContent: '</br>Yellow/White pages</br><a href="http://www.seccionamarilla.com.mx/">Mexico Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([47.411631, 28.369885], { balloonContentHeader: 'Moldova', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.md/">Moldova Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([46.862496, 103.846656], { balloonContentHeader: 'Mongolia', balloonContent: '</br>Court records</br><a href="http://www.supremecourt.mn/english">Mongolia Supreme Court</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([31.791702, -7.09262], { balloonContentHeader: 'Morocco', balloonContent: 'Business registry</br><a href="https://www.directinfo.ma/">directinfo.ma</a></br>Court records</br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TA/?Page=ServicesElectronique&TypJur=TA">Morocco Ministry of Justice (Administrative courts)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CAA/?Page=ServicesElectronique&TypJur=CAA">Morocco Ministry of Justice (Administrative courts of Appeal)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TC/?Page=ServicesElectronique&TypJur=TC">Morocco Ministry of Justice (Commercial courts)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CAC/?Page=ServicesElectronique&TypJur=CAC">Morocco Ministry of Justice (Commercial courts of Appeal)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/TPI/?Page=ServicesElectronique&TypJur=TPI">Morocco Ministry of Justice (Courts of first instance)</a></br><a href="https://www.mahakim.ma/Ar/Services/SuiviAffaires_new/CA/?Page=ServicesElectronique&TypJur=CA">Morocco Ministry of Justice (Courts of appeal)</a></br>Yellow/White pages</br><a href="http://www.telecontact.ma/">Morocco White Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-18.665695, 35.529562], { balloonContentHeader: 'Mozambique', balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/mozambique/en/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([21.913965, 95.956223], { balloonContentHeader: 'Myanmar', balloonContent: '</br>Yellow/White pages</br><a href="http://www.myanmaryellowpages.biz/">Myanmar Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-22.95764, 18.49041], { balloonContentHeader: 'Namibia', balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/namibia/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([52.132633, 5.291266], { balloonContentHeader: 'Netherlands', balloonContent: 'Cadastral map</br><a href="https://kadastralekaart.com/kaart">kadastralekaart.com</a></br>Court records</br><a href="https://uitspraken.rechtspraak.nl/">Rechtspraak</a></br>Yellow/White pages</br><a href="http://www.detelefoongids.nl/">Netherlands Telephone Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([52.132633, 5.291266], { balloonContentHeader: 'Netherlands', balloonContent: 'Transport live map</br><a target="_blank" href="https://ovzoeker.nl/">ovzoeker.nl</a></br>Venicle information</br><a target="_blank" href="https://www.kentekencheck.nl/kenteken">kentekencheck.nl</a></br>Court records</br><a href="https://uitspraken.rechtspraak.nl/">Rechtspraak</a></br>Yellow/White pages</br><a href="http://www.detelefoongids.nl/">Netherlands Telephone Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([43, -75], { balloonContentHeader: 'New York', balloonContent: 'Passengers lists</br><a target="_blank" href="http://www.castlegarden.org/searcher.php">Castle Garden: 1820 - 1913 </a></br><a target="_blank" href="https://heritage.statueofliberty.org/">Ellis Island Passenger Search database New York 1820 - 1957</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-40.900557, 174.885971], { balloonContentHeader: 'New Zeland', balloonContent: 'Business registry</br><a href="https://app.companiesoffice.govt.nz/companies/app/ui/pages/companies/search">app.companiesoffice.govt.nz</a></br>Transport live map</br><a target="_blank" href="https://anytrip.com.au/">anytrip.com.au</a></br>Yellow/White pages</br><a href="http://yellow.co.nz/">New Zealand Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([12.865416, -85.207229], { balloonContentHeader: 'Nicaragua', balloonContent: '</br>Yellow/White pages</br><a href="http://www.paginasamarillas.com.ni/">Nicaragua Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-19.054445, -169.867233], { balloonContentHeader: 'Niue', balloonContent: 'Business registry</br><a href="http://www.companies.gov.nu/search-the-register/companies-register/">companies.gov.nu</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([60.472024, 8.468946], { balloonContentHeader: 'Norway', balloonContent: 'Cadastral map</br><a href="https://geodataonline.maps.arcgis.com/apps/Embed/index.html?webmap=384b4cac7e4b4c41980f90dc0f30fb12&extent=11.0427,59.955,11.0472,59.9566&zoom=true&scale=true&disable_scroll=false&theme=light">geodataonline.maps.arcgis.com</a></br>Venicle information</br><a target="_blank" href="https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/sjekk-kjoretoyopplysninger/">vegvesen.no</a></br>Court records</br><a href="https://www.domstol.no/nar-gar-rettssaken/">Court Administration of Norwegia</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([60.472024, 8.468946], { balloonContentHeader: 'Norway', balloonContent: 'Business registry</br><a href="https://www.proff.no/">proff.no</a></br>Court records</br><a href="https://www.domstol.no/nar-gar-rettssaken/">Court Administration of Norwegia</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([46.10012, -77.49949], { balloonContentHeader: 'Ontario', balloonContent: 'Transport live map</br><a target="_blank" href="https://www.grt.ca/en/schedules-maps/desktop-realtime-map.aspx">grt.ca</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-6.314993, 143.95555], { balloonContentHeader: 'Papua New Guinea', balloonContent: 'Cadastral map</br><a href="http://portal.mra.gov.pg/map/">portal.mra.gov.pg</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([51.919438, 19.145136], { balloonContentHeader: 'Poland', balloonContent: 'Cadastral map</br><a href="hhttps://mapy.geoportal.gov.pl/imap/Imgp_2.html?gpmap=gp0">mapy.geoportal.gov.pl</a></br>Business registry</br><a href="https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/uisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0">podatki.gov.pl</a></br>Court records</br><a href="https://www.saos.org.pl/search">Saos</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([39.399872, -8.224454], { balloonContentHeader: 'Portugal', balloonContent: 'Business registry</br><a href="http://publicacoes.mj.pt/Pesquisa.aspx">publicacoes.mj.pt</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([56.946, 24.10589], { balloonContentHeader: 'Riga', balloonContent: 'Transport live map</br><a target="_blank" href="https://saraksti.rigassatiksme.lv/index.html#riga/map,page">saraksti.rigassatiksme.lv</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([45.943161, 24.96676], { balloonContentHeader: 'Romania', balloonContent: '</br>Yellow/White pages</br><a href="http://yellowpages.com.ro/">Romania Yellow Pages</a></br><a href="http://www.rolocal.ro/">Romania Local Search</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([61.52401, 105.318756], { balloonContentHeader: 'Russian Federation', balloonContent: 'Cadastral map</br><a href="https://pkk.rosreestr.ru/#/search">pkk.rosreestr.ru</a></br>Business registry</br><a href="https://rmsp.nalog.ru/">rmsp.nalog.ru</a>  </br>Venicle information</br><a target="_blank" href="https://www.nomerogram.ru/">nomerogram.ru</a></br>Court records</br><a href="https://sudrf.ru/index.php?id=300&searchtype=sp">State Automated System of the Russian Federation "Justice"</a></br><a href="https://sudact.ru/">Judicial and regulatory acts of the Russian Federation</a></br>Yellow/White pages</br><a href="http://www.yp.ru/yellow.html/english/?n=2">Russian Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([13.909444, -60.978893], { balloonContentHeader: 'Saint Lucia', balloonContent: 'Business registry</br><a href="http://www.rocip.gov.lc/stlucia/default.aspx">rocip.gov.lc</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([43.94236, 12.457777], { balloonContentHeader: 'San Marino', balloonContent: 'Business registry</br><a href="https://registroimprese.cc.sm/">registroimprese.cc.sm</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-33.45694, -70.64827], { balloonContentHeader: 'Santiago', balloonContent: 'Business registry</br><a href="https://www.conservador.cl/portal/indice_comercio">conservador.cl</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([52.49, 4.2], { balloonContentHeader: 'Scotland', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.abdn.ac.uk/emigration/search.html">The Scottish Emigration Database 1890 - 1960</a></br>Court records</br><a href="https://www.scotcourts.gov.uk/search-judgments/high-court">Scottish courts and tribunals (Hight Court)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/court-of-session">Scottish courts and tribunals (Court of Session)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-court">Scottish courts and tribunals (Sheriff court)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-appeal-court-judgment">Scottish courts and tribunals (Sheriff appeal court — criminal)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/sheriff-appeal-court---civil">Scottish courts and tribunals (Sheriff appeal court —   civil)</a></br><a href="https://www.scotcourts.gov.uk/search-judgments/national-personal-injury-judgments">Scottish courts and tribunals (National Personal Injury Judgments)</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([37.566, 126.9784], { balloonContentHeader: 'Seoul', balloonContent: 'Transport live map</br><a target="_blank" href="https://bus.go.kr/searchResult6.jsp">bus.go.kr</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-4.679574, 55.491977], { balloonContentHeader: 'Seychelles', balloonContent: 'Business registry</br><a href="http://www.sqa.sc/BizRegistration/WebSearchBusiness.aspx">sqa.sc</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([8.460555, -11.779889], { balloonContentHeader: 'Sierra Leone', balloonContent: 'Business registry</br><a href="http://www.oarg.gov.sl/cforms/portal.html">oarg.gov.sl</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([1.352083, 103.819836], { balloonContentHeader: 'Singapore', balloonContent: 'Business registry</br><a href="https://www.bizfile.gov.sg/ngbbizfileinternet/faces/oracle/webcenter/portalapp/pages/BizfileHomepage.jspx">bizfile.gov.sg</a></br>Yellow/White pages</br><a href="http://www.phonebook.com.sg/">Singapore White Pages</a></br><a href="http://www.yellowpages.com.sg/">Singapore Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([48.669026, 19.699024], { balloonContentHeader: 'Slovakia', balloonContent: 'Business registry</br><a href=""https://www.orsr.sk/search_subjekt.asp?lan=en"">orsr.sk</a> </br>Venicle information</br><a target=""_blank"" href=""https://www.stkonline.sk/spz/"">stkonline.sk</a></br>Court records</br><a href=""https://www.slov-lex.sk/vseobecne-sudy-sr"">Slov-lex</a></br>Phone Directory</br><a href="https://telefonny.zoznam.sk">telefonny.zoznam.sk</a></br>Registry of Debtors (companies and personal)</br? <a href="https://zoznamdlznikov.com">zoznamdlznikov.com</a></br>Ratings of companies</br> <a href="https://dlznik.zoznam.sk/sledovanie-firiem">dlznik.zoznam.sk</a></br>List of Registries and databases</br><a href="https://zoznam.sk/katalog/Spravodajstvo-informacie/Firemne-katalogy-databanky/">zoznam.sk</a></br>Yellow/White pages</br><a href="http://www.zlatestranky.sk/">Slovakia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([46.151241, 14.995463], { balloonContentHeader: 'Slovenia', balloonContent: '</br>Yellow/White pages</br><a href="http://yellow3.eunet.si/yellowpage/a/">Slovenia Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([-30.559482, 22.937506], { balloonContentHeader: 'South Africa', balloonContent: '</br>Yellow/White pages</br><a href="http://www.yellowpages.co.za/">South Africa Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([35.907757, 127.766922], { balloonContentHeader: 'South Korea', balloonContent: 'Business registry</br><a href="https://www.ftc.go.kr/www/bizCommList.do?key=232">ftc.go.kr</a></br>Yellow/White pages</br><a href="http://www.southkoreapages.com/">Korea Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([6.876991, 31.306978], { balloonContentHeader: 'South Sudan', balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/southsudan/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([50.90395, -1.40428], { balloonContentHeader: 'Southampton', balloonContent: 'Passengers lists</br><a target="_blank" href="https://www.lva.virginia.gov/exhibits/titanic/passengers.php">Titanic Passengers 1912</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([40.463667, -3.74922], { balloonContentHeader: 'Spain', balloonContent: 'Cadastral map</br><a href="https://www1.sedecatastro.gob.es/CYCBienInmueble/OVCBusqueda.aspx">sedecatastro.gob.es</a> </br>Venicle information</br><a target="_blank" href="https://www.oscaro.es/">oscaro.es</a></br>Yellow/White pages</br><a href="http://www.paginasamarillas.es/">Spain Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([60.128161, 18.643501], { balloonContentHeader: 'Sweden', balloonContent: '</br>Yellow/White pages</br><a href="http://www.proff.se/">Sweden Business Finder</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([46.818188, 8.227512], { balloonContentHeader: 'Switzerland', balloonContent: 'Cadastral map</br><a href="https://map.geo.admin.ch/?lang=de&topic=cadastre&bgLayer=ch.swisstopo.pixelkarte-farbe&E=2600163.86&N=1199711.79&zoom=8.880769760770255&layers_visibility=true,false">map.geo.admin.ch</a></br>Business registry</br><a href="https://www.zefix.admin.ch/en/search/entity/welcome">zefix.admin.ch</a></br>Yellow/White pages</br><a href="http://www.branchenbuch.ch/">Switzerland Business Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([15.870032, 100.992541], { balloonContentHeader: 'Tailand', balloonContent: 'Cadastral map</br><a href="https://landsmaps.dol.go.th/">landsmaps.dol.go.th</a></br>Court records</br><a href="https://decision.coj.go.th/">Computer Systems Division Bureau of Information Technology</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([38.861034, 71.276093], { balloonContentHeader: 'Tajikistan', balloonContent: 'Business registry</br><a href="https://andoz.tj/Fehrist/Ur?culture=ru-RU">andoz.tj</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([59.43696, 24.75353], { balloonContentHeader: 'Tallin', balloonContent: 'Transport live map</br><a target="_blank" href="https://gis.ee/tallinn/">gis.ee</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-6.369028, 34.888822], { balloonContentHeader: 'Tanzania', balloonContent: 'Cadastral map</br><a href="http://portal.madini.go.tz/map/">portal.madini.go.tz</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([8.619543, 0.824782], { balloonContentHeader: 'Togo', balloonContent: 'Cadastral map</br><a href="https://portals.landfolio.com/togo/en/">portals.landfolio.com</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([69.6489, 18.95508], { balloonContentHeader: 'Tromse', balloonContent: 'Transport live map</br><a target="_blank" href="https://tromsreise.no/">tromsreise.no</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([38.963745, 35.243322], { balloonContentHeader: 'Turkey', balloonContent: 'Cadastral map</br><a href="https://cbs.ogm.gov.tr/vatandas/">cbs.ogm.gov.tr</a></br>Court records</br><a href="https://www.rekabet.gov.tr/tr/Davalar">Competition Authority</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([60.45148, 22.26869], { balloonContentHeader: 'Turku', balloonContent: 'Transport live map</br><a target="_blank" href="https://live.foli.fi/lemap">live.foli.fi</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([1.373333, 32.290275], { balloonContentHeader: 'Uganda', balloonContent: 'Cadastral map</br><a href="http://portals.flexicadastre.com/uganda/">portals.flexicadastre.com</a></br>Yellow/White pages</br><a href="http://www.yellowpages-uganda.com/">Uganda Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([48.379433, 31.16558], { balloonContentHeader: 'Ukraine', balloonContent: 'Cadastral map</br><a href="https://map.land.gov.ua/?cc=3461340.1719504707,6177585.367221659&z=6.5&l=kadastr&bl=ortho10k_all">map.land.gov.ua</a></br>Transport live map</br><a target="_blank" href="https://www.eway.in.ua/en/cities/kyiv/routes">eway.in.ua</a></br>Court records</br><a href="https://court.gov.ua/fair/">Unified Contact Center of the Judiciary of Ukraine</a></br><a href="https://reyestr.court.gov.ua/">Unified state register of court decisions</a></br>Yellow/White pages</br><a href="http://www.ukraine.org/www.ukrainet.lviv.ua/yellow/pages.htm">Ukraine Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([55.378051, -3.435973], { balloonContentHeader: 'United Kingdom', balloonContent: 'Business registry</br><a href="https://beta.companieshouse.gov.uk/search/companies">beta.companieshouse.gov.uk</a></br>Transport live map</br><a target="_blank" href="http://www.essexbus.info/map.html">Essexbus.info</a></br>Passengers lists</br><a target="_blank" href="https://search.findmypast.co.uk/search-world-records/passenger-lists-leaving-uk-1890-1960">Leaving UK 1890-1960</a></br><a target="_blank" href="https://globalstories.ssgreatbritain.org/">Global Stories: passengers and crew of SS Great Britain</a> </br>Venicle information</br><a target="_blank" href="https://www.carcheck.co.uk/reg">carcheck.co.uk</a></br>Yellow/White pages</br><a href="http://www.scoot.co.uk/">UK Business Directory</a></br><a href="https://www.yell.com/">UK Online Business Directory</a></br><a href="http://www.the-internet-pages.co.uk/">Business Directory</a></br><a href="http://www.ukphonebook.com/">UK Phone Book</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([37.09024, -95.712891], { balloonContentHeader: 'United States', balloonContent: 'Cadastral map</br><a href="https://qpublic.schneidercorp.com/">qpublic.schneidercorp.com</a></br>Passengers lists</br><a target="_blank" href="https://www.slavevoyages.org/voyage/database">slavevoyages.org/voyage/database</a></br><a target="_blank" href="https://www.slavevoyages.org/american/database">slavevoyages.org/american/database</a></br><a target="_blank" href="https://www.slavevoyages.org/resources/names-database">slavevoyages.org/resources/names-database</a></br>Venicle information</br><a target="_blank" href="https://www.autocheck.com/vehiclehistory/autocheck-score">autocheck.com</a></br>Court records</br><a href="https://www.judyrecords.com/">JudyRecords.com (564 million USA Court Cases</a></br>Yellow/White pages</br><a href="http://www.superpages.com/">Yellow Pages</a></br><a href="http://www.switchboard.com/">Internet Phone Book</a></br><a href="http://www.yellowpages.com/">US Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([41.377491, 64.585262], { balloonContentHeader: 'Uzbekistan', balloonContent: 'Business registry</br><a href="https://orginfo.uz/">orginfo.uz</a></br>Court records</br><a href="https://public.sud.uz/#!/sign/criminal">Supreme court of the Respublic of Uzbekistan (Criminal cases)</a></br><a href="https://public.sud.uz/#!/sign/economy">Supreme court of the Respublic of Uzbekistan (Economic cases)</a></br><a href="https://public.sud.uz/#!/sign/administrative">Supreme court of the Respublic of Uzbekistan (Administrative cases)</a></br><a href="https://public.sud.uz/#!/sign/civil">Supreme court of the Respublic of Uzbekistan (Civil cases)</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([6.42375, -66.58973], { balloonContentHeader: 'Venezuela', balloonContent: '</br>Yellow/White pages</br><a href="http://venezuela.paginasamarillas.com/">Venezuela Yellow Pages</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([14.058324, 108.277199], { balloonContentHeader: 'Vietnam', balloonContent: 'Business registry</br><a href="https://dichvuthongtin.dkkd.gov.vn/inf/default.aspx">dichvuthongtin.dkkd.gov.vn</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}))
+.add(new ymaps.Placemark([54.68916, 25.2798], { balloonContentHeader: 'Vilnius', balloonContent: 'Transport live map</br><a target="_blank" href="https://www.stops.lt/vilnius/#vilnius/map">stops.lt</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#98fb98'}))
+.add(new ymaps.Placemark([-13.133897, 27.849332], { balloonContentHeader: 'Zambia', balloonContent: 'Cadastral map</br><a href="http://portals.landfolio.com/zambia/">portals.landfolio.com</a></br>Business reqistry<a href="https://www.zambiayp.com">Zambia Business Directory</a>'}, {preset: 'islands#governmentCircleIcon',iconColor: '#ff0000'}));
+  }
+	
 	</script>
 	<style>
-	html,
-	body,
-	#map {
-		width: 100%;
-		height: 95%;
-		padding: 0;
-		margin: 0;
-	}
-	</style>
+        html, body, #map {
+            width: 100%; height: 95%; padding: 0; margin: 0;
+        }
+    </style>
 </head>
-
 <body>
-	<div id="map"></div>
+<div id="map"></div>
 	<div class="well">
-		<h2>Worldwide OSINT tools map </h2> Phonebooks, cadastral maps, venicle numbers databases, business registries, passengers lists, court records. <a href="https://t.me/cybdetective" class="telegram-follow-button" data-show-count="false">Follow @cybdetective</a>
-		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> <a href="https://twitter.com/cyb_detective?ref_src=twsrc%5Etfw" class="twitter-follow-button-2" data-show-count="false">Follow @cyb_detective</a> </div>
+		 <h2>Worldwide OSINT tools map </h2>
+		Phonebooks, cadastral maps, venicle numbers databases, business registries, passengers lists, court records. 
+         <a href="https://t.me/cybdetective" class="telegram-follow-button" data-show-count="false">Follow @cybdetective</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <a href="https://twitter.com/cyb_detective?ref_src=twsrc%5Etfw" class="twitter-follow-button-2" data-show-count="false">Follow @cyb_detective</a>
+         </div>
 </body>
-
 </html>
