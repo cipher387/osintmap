@@ -25,15 +25,8 @@ https://cipher387.github.io/osintmap/
                preset: 'islands#governmentCircleIcon',
                iconColor: '#ff0000'
             }))    
-  
-  
-  
- 
- 
- 
- 
-  
-<hr>
+            ```
+            <hr>
 
 Twitter — https://twitter.com/cyb_detective
 
