@@ -3,6 +3,22 @@ Explore this project at:
 https://cipher387.github.io/osintmap/
 
 ![Worldwide OSINT Map](https://github.com/cipher387/osintmap/blob/main/osintmap.jpg)
+<hr>
+
+Twitter — https://twitter.com/cyb_detective
+
+Telegram — https://t.me/cybdetective
+
+Linkedin — https://www.linkedin.com/groups/1908171/
+
+Revue — https://www.getrevue.co/profile/cyb_detective
+
+Github — https://github.com/cipher387
+
+Discord — every week I post a fresh invite on Twitter. You can find it by searching for "discord from:cyb_detective
+
+<hr>
+
 
 <h1>What if you want to make a copy of the map with other points?</h1>
 
@@ -25,19 +41,5 @@ https://cipher387.github.io/osintmap/
                preset: 'islands#governmentCircleIcon',
                iconColor: '#ff0000'
             }))    
-            ```
-            <hr>
-
-Twitter — https://twitter.com/cyb_detective
-
-Telegram — https://t.me/cybdetective
-
-Linkedin — https://www.linkedin.com/groups/1908171/
-
-Revue — https://www.getrevue.co/profile/cyb_detective
-
-Github — https://github.com/cipher387
-
-Discord — every week I post a fresh invite on Twitter. You can find it by searching for "discord from:cyb_detective
-
-<hr>
+          
+            
