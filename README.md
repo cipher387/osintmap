@@ -4,12 +4,6 @@ https://cipher387.github.io/osintmap/
 
 ![Worldwide OSINT Map](https://github.com/cipher387/osintmap/blob/main/osintmap.jpg)
 
-<a target="_blank" href="https://twitter.com/cyb_detective" title="My Twitter"><img src="https://img.shields.io/badge/-@cyb_detective-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/cyb_detective"></a>
-
-
-Telegram — https://t.me/cybdetective
-
-
 <h1>What if you want to make a copy of the map with other points?</h1>
 
 1. Go to https://developer.tech.yandex.ru/services/ and get the API-key for Yandex Maps API (for non-commercial use only).
@@ -32,3 +26,18 @@ Telegram — https://t.me/cybdetective
                iconColor: '#ff0000'
             }))    
   
+<hr>
+
+Twitter — https://twitter.com/cyb_detective
+
+Telegram — https://t.me/cybdetective
+
+Linkedin — https://www.linkedin.com/groups/1908171/
+
+Revue — https://www.getrevue.co/profile/cyb_detective
+
+Github — https://github.com/cipher387
+
+Discord — every week I post a fresh invite on Twitter. You can find it by searching for "discord from:cyb_detective
+
+<hr>
