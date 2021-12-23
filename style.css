@@ -1,3 +1,15 @@
+.discord-follow-button {
+    color: #fff;
+    background: #9932CC;
+    padding: 3px 7px;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 4px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
 table, th, td {
   border: 2px solid black;
   vertical-align: center;
