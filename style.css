@@ -11,10 +11,11 @@
 
 
 table, th, td {
-  border: 2px solid black;
+  border: 5px solid silver;
   vertical-align: center;
   text-align: center;
   padding: 15px;
+  
 }
 .mainsite-button
 {
