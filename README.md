@@ -7,6 +7,8 @@ https://cipher387.github.io/osintmap/
 
 <h1>List of countries, regions, cities, towns and links on the map</h1>
 
+<hr>
+
 | Afganistan | <a href="http://203.215.33.115/CompanyVerification/Pages/BuReVerification.aspx">Central Business Registry</a> |</br>
 | Africa | <a href="https://appruve.co">Verify people ID in Ghana, Egypt, Nigeria, Uganda, Kenya, South Africa</a></br><a href="https://gazettes.africa/">African Gazettes</a></br><a href="https://africanlii.org/">Caselaw, legislation and journals</a></br><a href="https://www.aiddata.org">Different datasets collection</a> |</br>
 | Alabama | <a href="https://alabama.findyourunclaimedproperty.com/">UnclaimedProperty Database</a></br><a href="https://abme.igovsolution.net/online/Lookups/Application_StatusCheck.aspx">Check Medical License</a> |</br>
