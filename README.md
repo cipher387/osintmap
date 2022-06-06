@@ -282,22 +282,7 @@ https://cipher387.github.io/osintmap/
 | Zimbabwe | <a href="https://www.zimbabweyp.com/">Yellow Pages</a> |</br>
 | Zurich | <a href="https://www.viacar.ch/eindex/login.aspx?kanton=ZH">License plates search</a> |
 </br>
- 
-<hr>
 
-Twitter — https://twitter.com/cyb_detective
-
-Telegram — https://t.me/cybdetective
-
-Linkedin — https://www.linkedin.com/groups/1908171/
-
-Revue — https://www.getrevue.co/profile/cyb_detective
-
-Github — https://github.com/cipher387
-
-Discord — https://cipher387.github.io/discordlink.html
-
-<hr>
 
 
 <h1>What if you want to make a copy of the map with other points?</h1>
@@ -322,4 +307,16 @@ Discord — https://cipher387.github.io/discordlink.html
                iconColor: '#ff0000'
             }))    
           
+       
+<hr>
+
+Twitter — https://twitter.com/cyb_detective
+
+Telegram — https://t.me/cybdetective
+
+Github — https://github.com/cipher387
+
+Discord — https://cipher387.github.io/discordlink.html
+
+<hr>
             
