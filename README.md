@@ -1,3 +1,11 @@
+
+
+<img alt="GitHub stars" src="https://img.shields.io/github/stars/cipher387/osintmap">
+ 
+<img alt="GitHub forks" src="https://img.shields.io/github/forks/cipher387/osintmap">
+
+
+
 Explore this project at:
 
 https://cipher387.github.io/osintmap/
