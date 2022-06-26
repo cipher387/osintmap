@@ -1,10 +1,13 @@
 
 
+<h1>Worldwide OSINT Tools Map</h1>
+
 <img alt="GitHub stars" src="https://img.shields.io/github/stars/cipher387/osintmap">
  
 <img alt="GitHub forks" src="https://img.shields.io/github/forks/cipher387/osintmap">
 
 
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
 
 Explore this project at:
 
