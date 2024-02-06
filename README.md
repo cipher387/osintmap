@@ -249,7 +249,7 @@ Explore this project at:
 | Taiwan | <a href="http://taiwanyello.com/">Yellow Pages</a><a href="https://findbiz.nat.gov.tw/fts/query/QueryBar/queryInit.do?request_locale=en&fhl=en">Business lookup</a> |
 | Tajikistan | Business registry</br><a href="https://andoz.tj/Fehrist/Ur?culture=ru-RU">andoz.tj</a> |
 | Tallin | Transport live map</br><a target="_blank" href="https://gis.ee/tallinn/">gis.ee</a> |
-| Tanzania | Cadastral map</br><a href="http://portal.madini.go.tz/map/">portal.madini.go.tz</a></br><a href="https://www.tanzapages.com/">Tanzania</a> |
+| Tanzania | Cadastral map</br><a href="http://portal.madini.go.tz/map/">portal.madini.go.tz</a></br><a href="https://www.tanzapages.com/">Tanzania</a><a href="https://www.tanzaniabiz.com/">Tanzania</a> Utalii Directory - Tanzania<a href="https://www.utaliidirectory.com/">Tanzania</a> |
 | Tasmania | </br><a href="https://www.transport.tas.gov.au/MRSWebInterface/public/regoLookup/registrationLookup.jsf">Venicle Registration Search</a> |
 | Tennessee | <a href="https://sos.tn.gov/products/business-services/business-information-search-0">Business search</a> |
 | Texas | <a href="https://mycpa.cpa.state.tx.us/coa/">Taxable enitity search</a> |
